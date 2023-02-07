@@ -1,18 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,700;1,500&display=swap');
-@import url('http://fonts.cdnfonts.com/css/swis721-ltcn-bt');
-@import url("http://db.onlinewebfonts.com/c/07434b431d080ba8f0fd86f4d152c4ba?family=Swis721+BlkCn+BT");
-@import url('https://fonts.cdnfonts.com/css/futura-pt');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 :root{
     /*fonts*/
-    --font-jost: 'Jost', sans-serif;
-    --font-swiss: 'Swis721 LtCn BT', sans-serif;
-    --font-swiss-black: 'Swis721 BlkCn BT', sans-serif;
-    // --font-futura: 'Futura', sans-serif;
-    --font-futura: 'Futura PT', sans-serif;
+    --font-rubik: 'Rubik', sans-serif;
+    --font-roboto: 'Roboto', sans-serif;
 
     /*colors*/
-    --color-primary: #2DC4F4;
-    --color-secondary: #F9F9F9;
-    --color-text:#757575;
+    --color-primary: #2F3AB4;
+    --color-secondary: #595858;
+    --color-text:#878787;
 }
