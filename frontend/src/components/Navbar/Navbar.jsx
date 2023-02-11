@@ -26,8 +26,8 @@ export const Navbar = () => {
       variants={headerVariants}
       initial="hidden"
       whileInView="show"
-      className={`bg-primary paddings ${css.wrapper}`}
-      viewport={{ once: true, amount: 0.25 }}
+      className={`paddings ${css.wrapper}`}
+      viewport={{ once: false, amount: 0.25 }}
       style={{ boxShadow: headerShadow }}
     >
       <div className={`innerWidth ${css.container} flexCenter`}>
