@@ -1,78 +1,68 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import styles from "./Navbar.module.scss";
-import { HamburgerIcon } from "../../assets/svgs";
-import { LogoFc } from "../../assets/svgs";
+import { useRef, useState } from "react";
+// import { Link } from "react-router-dom";
+// import { HamburgerIcon } from "../../assets/svgs";
+// import { LogoFc } from "../../assets/svgs";
+
+import css from "./Navbar.module.scss";
+import { BiPhoneCall, BiMenuAltRight } from "react-icons/bi";
+import { motion } from "framer-motion";
+import { getMenuStyles, headerVariants } from "../../utils/motion";
+import useHeaderShadow from "../../hooks/useHeaderShadow";
+import useOutsideAlerter from "../../hooks/useOutsideAlerter";
 
 export const Navbar = () => {
-  const [click, setClick] = useState(false);
-  const [navBg, setNavBg] = useState(false);
+  const menuRef = useRef(null);
+  const [menuOpened, setMenuOpened] = useState(false);
+  const headerShadow = useHeaderShadow();
 
-  const handleClick = () => setClick(!click);
-
-  const changeNavBg = () => {
-    window.scrollY >= 100 ? setNavBg(true) : setNavBg(false);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", changeNavBg);
-
-    return () => {
-      window.removeEventListener("scroll", changeNavBg);
-    };
-  }, []);
+  //to handle click outside of sidebar on mobile
+  useOutsideAlerter({
+    menuRef,
+    setMenuOpened,
+  });
 
   return (
-    <nav
-      className={
-        navBg ? `${styles.navbar} ${styles.navBg}` : `${styles.navbar}`
-      }
+    <motion.div
+      variants={headerVariants}
+      initial="hidden"
+      whileInView="show"
+      className={`bg-primary paddings ${css.wrapper}`}
+      viewport={{ once: true, amount: 0.25 }}
+      style={{ boxShadow: headerShadow }}
     >
-      <div className={styles.navContainer}>
-        <div className={styles.logoContainer}>
-          <div className={styles.navLogo}>
-            <LogoFc width={"300px"} />
-          </div>
-        </div>
+      <div className={`innerWidth ${css.container} flexCenter`}>
+        <div className={css.name}>Binjan</div>
         <ul
-          className={
-            click && !navBg
-              ? `${styles.navMenu} ${styles.active}`
-              : click && navBg
-              ? `${styles.navMenu} ${styles.activeW}`
-              : `${styles.navMenu}`
-          }
+          className={`flexCenter ${css.menu}`}
+          ref={menuRef}
+          style={getMenuStyles(menuOpened)}
         >
-          <li className={styles.navItem}>
-            <p className={`${styles.navLinks}`} onClick={handleClick}>
-              <Link to="hero">About Us</Link>
-            </p>
+          <li>
+            <a href="#experties">Services</a>
           </li>
-          <li className={styles.navItem}>
-            <p className={`${styles.navLinks}`} onClick={handleClick}>
-              <Link to="about-us">Title Insurance</Link>
-            </p>
+          <li>
+            <a href="#work">Experience</a>
           </li>
-          <li className={styles.navItem}>
-            <p className={`${styles.navLinks}`} onClick={handleClick}>
-              <Link to="buyers">Trust Services</Link>
-            </p>
+          <li>
+            <a href="#portfolio">Portfolio</a>
           </li>
-          <li className={styles.navItem}>
-            <p className={`${styles.navLinks}`} onClick={handleClick}>
-              <Link to="sellers">InternationalServices</Link>
-            </p>
+          <li>
+            <a href="#people">Testimonials</a>
           </li>
-          <li className={styles.navItem}>
-            <p className={`${styles.navLinks}`} onClick={handleClick}>
-              <Link to="faq">Contact Us</Link>
-            </p>
+          <li className={`flexCenter ${css.phone}`}>
+            <p>+001 (313) 345 678</p>
+            <BiPhoneCall size={"40px"} />
           </li>
         </ul>
-        <div className={styles.navIcon} onClick={handleClick}>
-          <span>Menu</span> <HamburgerIcon />
+
+        {/* for medium and small screens */}
+        <div
+          className={css.menuIcon}
+          onClick={() => setMenuOpened((prev) => !prev)}
+        >
+          <BiMenuAltRight size={30} />
         </div>
       </div>
-    </nav>
+    </motion.div>
   );
 };
