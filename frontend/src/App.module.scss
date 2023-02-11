@@ -1,0 +1,6 @@
+
+@import './scss/abstracts/constants';
+.container{
+    overflow-x: clip; // Para que no si se desborde el contenido se recorte
+    position: relative;
+}
