@@ -43,19 +43,54 @@ export const Navbar = () => {
           style={getMenuStyles(menuOpened)}
         >
           <li onClick={() => setMenuOpened(!menuOpened)}>
-            <NavLink to="/Home">Home</NavLink>
+            <NavLink
+              to="/"
+              style={({ isActive }) => ({
+                color: isActive ? "#2F3AB4" : undefined,
+              })}
+            >
+              Home
+            </NavLink>
           </li>
           <li onClick={() => setMenuOpened(!menuOpened)}>
-            <NavLink to="/About">About Us</NavLink>
+            <NavLink
+              to="/About"
+              style={({ isActive }) => ({
+                color: isActive ? "#2F3AB4" : undefined,
+              })}
+            >
+              About Us
+            </NavLink>
           </li>
           <li onClick={() => setMenuOpened(!menuOpened)}>
-            <NavLink to="/Services">Services</NavLink>
+            <NavLink
+              to="/Services"
+              style={({ isActive }) => ({
+                color: isActive ? "#2F3AB4" : undefined,
+              })}
+            >
+              Services
+            </NavLink>
           </li>
           <li onClick={() => setMenuOpened(!menuOpened)}>
-            <NavLink to="/Gallery">Gallery</NavLink>
+            <NavLink
+              to="/Gallery"
+              style={({ isActive }) => ({
+                color: isActive ? "#2F3AB4" : undefined,
+              })}
+            >
+              Gallery
+            </NavLink>
           </li>
           <li onClick={() => setMenuOpened(!menuOpened)}>
-            <NavLink to="/Contact">Contact Us</NavLink>
+            <NavLink
+              to="/Contact"
+              style={({ isActive }) => ({
+                color: isActive ? "#2F3AB4" : undefined,
+              })}
+            >
+              Contact Us
+            </NavLink>
           </li>
         </ul>
 
