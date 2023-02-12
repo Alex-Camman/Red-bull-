@@ -24,7 +24,7 @@ export const Navbar = () => {
       variants={headerVariants}
       initial="hidden"
       whileInView="show"
-      className={`paddings ${css.wrapper}`}
+      className={`${css.wrapper}`}
       viewport={{ once: false, amount: 0.25 }}
       style={{ boxShadow: headerShadow }}
     >
@@ -37,27 +37,27 @@ export const Navbar = () => {
           ref={menuRef}
           style={getMenuStyles(menuOpened)}
         >
-          <li>
-            <a href="#experties">Home</a>
+          <li onClick={() => setMenuOpened(!menuOpened)}>
+            <a href="#Home">Home</a>
           </li>
-          <li>
-            <a href="#work">About</a>
+          <li onClick={() => setMenuOpened(!menuOpened)}>
+            <a href="#About">About</a>
           </li>
-          <li>
-            <a href="#portfolio">Services</a>
+          <li onClick={() => setMenuOpened(!menuOpened)}>
+            <a href="#Services">Services</a>
           </li>
-          <li>
-            <a href="#people">Gallery</a>
+          <li onClick={() => setMenuOpened(!menuOpened)}>
+            <a href="#Gallery">Gallery</a>
           </li>
-          <li>
-            <a href="#people">Contact Us</a>
+          <li onClick={() => setMenuOpened(!menuOpened)}>
+            <a href="#Contact">Contact Us</a>
           </li>
         </ul>
 
         {/* for medium and small screens */}
         <div
           className={css.menuIcon}
-          onClick={() => setMenuOpened((prev) => !prev)}
+          onClick={() => setMenuOpened(!menuOpened)}
         >
           <BiMenuAltRight size={30} />
         </div>

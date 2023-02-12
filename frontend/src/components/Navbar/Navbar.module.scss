@@ -9,16 +9,25 @@
     top: 0px;
     transition: all 300ms ease;
     background: white;
+    padding: 1.5rem;
+    @media (min-width: $sm) {
+        padding: 4rem;
+      }
+      @media (min-width: $xl),
+      (min-width: $md) {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
     .container {
         position: relative;
         justify-content: space-between;
         font-weight: 500;
 
         .name {
+            // position: absolute;
             font-size: 1rem;
             svg{
-                width: 60%;
-                height: 60%;
+                width: 100px;
             }
         }
 
