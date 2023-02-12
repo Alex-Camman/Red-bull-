@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-// import { Link } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { LogoFc } from "../../assets/svgs";
 import css from "./Navbar.module.scss";
 import { BiMenuAltRight } from "react-icons/bi";
@@ -12,12 +12,17 @@ export const Navbar = () => {
   const menuRef = useRef(null);
   const [menuOpened, setMenuOpened] = useState(false);
   const headerShadow = useHeaderShadow();
+  const navigate = useNavigate();
 
   //to handle click outside of sidebar on mobile
   useOutsideAlerter({
     menuRef,
     setMenuOpened,
   });
+
+  const goToPage = (path) => {
+    navigate(path);
+  };
 
   return (
     <motion.div
@@ -29,7 +34,7 @@ export const Navbar = () => {
       style={{ boxShadow: headerShadow }}
     >
       <div className={`innerWidth ${css.container} flexCenter`}>
-        <div className={css.name}>
+        <div className={css.logo} onClick={() => goToPage("/")}>
           <LogoFc />
         </div>
         <ul
@@ -38,19 +43,19 @@ export const Navbar = () => {
           style={getMenuStyles(menuOpened)}
         >
           <li onClick={() => setMenuOpened(!menuOpened)}>
-            <a href="#Home">Home</a>
+            <NavLink to="/Home">Home</NavLink>
           </li>
           <li onClick={() => setMenuOpened(!menuOpened)}>
-            <a href="#About">About Us</a>
+            <NavLink to="/About">About Us</NavLink>
           </li>
           <li onClick={() => setMenuOpened(!menuOpened)}>
-            <a href="#Services">Services</a>
+            <NavLink to="/Services">Services</NavLink>
           </li>
           <li onClick={() => setMenuOpened(!menuOpened)}>
-            <a href="#Gallery">Gallery</a>
+            <NavLink to="/Gallery">Gallery</NavLink>
           </li>
           <li onClick={() => setMenuOpened(!menuOpened)}>
-            <a href="#Contact">Contact Us</a>
+            <NavLink to="/Contact">Contact Us</NavLink>
           </li>
         </ul>
 
