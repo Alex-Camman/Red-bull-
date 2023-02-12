@@ -4,7 +4,13 @@
     position: relative;
 }
 .bg-primary {
-    background: #F8F7F1;
+    background: var(--color-primary);
+  }
+  .bg-secondary {
+    background: var(--color-secondary);
+  }
+  .bg-text {
+    background: var(--color-text);
   }
   
 .innerWidth {

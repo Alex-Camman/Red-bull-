@@ -1,10 +1,8 @@
 import { useRef, useState } from "react";
 // import { Link } from "react-router-dom";
-// import { HamburgerIcon } from "../../assets/svgs";
-// import { LogoFc } from "../../assets/svgs";
-
+import { LogoFc } from "../../assets/svgs";
 import css from "./Navbar.module.scss";
-import { BiPhoneCall, BiMenuAltRight } from "react-icons/bi";
+import { BiMenuAltRight } from "react-icons/bi";
 import { motion } from "framer-motion";
 import { getMenuStyles, headerVariants } from "../../utils/motion";
 import useHeaderShadow from "../../hooks/useHeaderShadow";
@@ -31,27 +29,28 @@ export const Navbar = () => {
       style={{ boxShadow: headerShadow }}
     >
       <div className={`innerWidth ${css.container} flexCenter`}>
-        <div className={css.name}>Binjan</div>
+        <div className={css.name}>
+          <LogoFc />
+        </div>
         <ul
           className={`flexCenter ${css.menu}`}
           ref={menuRef}
           style={getMenuStyles(menuOpened)}
         >
           <li>
-            <a href="#experties">Services</a>
+            <a href="#experties">Home</a>
           </li>
           <li>
-            <a href="#work">Experience</a>
+            <a href="#work">About</a>
           </li>
           <li>
-            <a href="#portfolio">Portfolio</a>
+            <a href="#portfolio">Services</a>
           </li>
           <li>
-            <a href="#people">Testimonials</a>
+            <a href="#people">Gallery</a>
           </li>
-          <li className={`flexCenter ${css.phone}`}>
-            <p>+001 (313) 345 678</p>
-            <BiPhoneCall size={"40px"} />
+          <li>
+            <a href="#people">Contact Us</a>
           </li>
         </ul>
 
