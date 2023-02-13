@@ -2,6 +2,8 @@ import css from "./Footer.module.scss";
 import { LogoFc } from "../../assets/svgs";
 import { motion } from "framer-motion";
 import { footerVariants, staggerChildren } from "../../utils/motion";
+import { HiOutlineMail, HiPhone, HiLocationMarker } from "react-icons/hi";
+import { BsInstagram, BsFacebook, BsTwitter, BsLinkedin } from "react-icons/bs";
 
 export const Footer = () => {
   return (
@@ -14,29 +16,68 @@ export const Footer = () => {
     >
       <motion.div
         variants={footerVariants}
-        className={`innerWidth yPaddings flexCenter ${css.container}`}
+        className={`innerWidth ${css.container}`}
       >
-        <div className={css.left}>
-          <span className="primaryText">
-            Let's make something <br />
-            amazing together.
-          </span>
-          <span className="primaryText">
-            Start by <a href="mailto:zainkeepscode@gmail.com">saying hi</a>
-          </span>
-        </div>
-
-        <div className={css.right}>
-          <div className={css.info}>
-            <span className="secondaryText">Information</span>
-            <p>145 New York, FL 5467, USA</p>
+        <div className={`${css.top}`}>
+          <div className={`${css.brand}`}>
+            <div className={css.logo}>
+              <LogoFc />
+            </div>
+            <div className={`secondaryText ${css.text}`}>
+              Building breathtaking pools. Expertise, commitment, quality
+              guaranteed.
+            </div>
           </div>
-          <ul className={css.menu}>
-            <li>Services</li>
-            <li>Works</li>
-            <li>Notes</li>
-            <li>Experience</li>
-          </ul>
+          <div className={`${css.services}`}>
+            <h4>Services</h4>
+            <ul>
+              <li>Pool Excavations</li>
+              <li>Steel Framing for Pools</li>
+            </ul>
+          </div>
+          <div className={`${css.contact}`}>
+            <h4>ContactUs</h4>
+            <ul>
+              <li>
+                <span>
+                  <HiOutlineMail />
+                </span>
+                franciscocazaressteel@hotmail.com
+              </li>
+              <li>
+                <span>
+                  <HiPhone />
+                </span>
+                (909) 630-3576, (909) 506-7025
+              </li>
+              <li>
+                <span>
+                  <HiLocationMarker />
+                </span>
+                Pomona, California
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <div className={`${css.bottom}`}>
+          <div className={`${css.copy}`}>
+            <span>Copyright</span> © 2023 Fc Steel Inc All Rights Reserved
+          </div>
+          <div className={`${css.icons}`}>
+            <div className={`${css.item}`}>
+              <BsInstagram />
+            </div>
+            <div className={`${css.item}`}>
+              <BsFacebook />
+            </div>
+            <div className={`${css.item}`}>
+              <BsTwitter />
+            </div>
+            <div className={`${css.item}`}>
+              <BsLinkedin />
+            </div>
+          </div>
         </div>
       </motion.div>
     </motion.section>
