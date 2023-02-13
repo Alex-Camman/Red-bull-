@@ -1,4 +1,4 @@
-export const LogoFc = (props) => (
+export const LogoW = (props) => (
   <svg
     id="Capa_1"
     data-name="Capa 1"
@@ -12,9 +12,9 @@ export const LogoFc = (props) => (
     <path
       d="M697 150S631.54 72.32 520.85 26.27C445.62-5 366.81.11 336.09.62c-29.26.48-52.76 4.1-59.43 4.85C91.49 26.37 0 200.52 0 200.52s79.67-76.36 198.57-133.35C252.73 41.22 383 28.28 491.14 50.12 625.44 77.24 697 150 697 150Z"
       style={{
-        fill: "#0b2bb0",
-        stroke: "#0b2bb0",
+        stroke: "#fff",
         strokeMiterlimit: 10,
+        fill: "#fff",
       }}
     />
     <text
