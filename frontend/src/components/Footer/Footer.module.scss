@@ -1,59 +1,82 @@
-@import '../../scss/abstracts/variables';
+@import "../../scss/abstracts/variables";
 
-.wrapper{
+.wrapper {
     background: #ffffff;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    .container{
+    .container {
         gap: 2rem;
         @media (max-width: $sm) {
             flex-direction: column;
             gap: 2rem;
             align-items: flex-start;
         }
-        .top{
+        .top {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            .brand{
+            @media (max-width: $lg) {
+                flex-direction: column;
+                gap: 2rem;
+                align-items: flex-start;
+            }
+            .brand {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
-                .logo{
-                    svg{
+                @media (max-width: $xl) {
+                    width: 40%;
+                }
+                @media (max-width: $lg) {
+                    width: 60%;
+                }
+                @media (max-width: $sm) {
+                    width: 100%;
+                }
+                .logo {
+                    svg {
                         width: 300px;
                     }
                 }
-                .text{
+                .text {
                     width: 80%;
                     font-size: 1.1rem;
                     font-weight: 500;
                     color: var(--color-secondary);
+                    line-height: 30px;
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                    @media (max-width: $xl) {
+                        width: 100%;
+                    }
+                    @media (max-width: $sm) {
+                        font-size: 1.1rem;
+                        line-height: 40px;
+                    }
                 }
             }
-            h4{
+            h4 {
                 font-size: 1.5rem;
                 font-weight: 500;
                 margin-bottom: 1rem;
                 color: var(--color-secondary);
             }
-            .services{
-                ul{
-                    li{
+            .services {
+                ul {
+                    li {
                         font-size: 1.1rem;
                         margin-bottom: 1rem;
                         color: var(--color-text);
-                        
                     }
                 }
             }
-            .contact{
-                ul{
-                    li{
+            .contact {
+                ul {
+                    li {
                         display: flex;
                         align-items: center;
                         margin-bottom: 1rem;
                         color: var(--color-text);
-                        span{
+                        span {
                             font-size: 24px;
                             margin-right: 0.5rem;
                             display: flex;
@@ -64,22 +87,30 @@
                 }
             }
         }
-        hr{
+        hr {
             border: 1px solid var(--color-primary);
             background-color: var(--color-primary);
             opacity: 0.4;
             margin: 2rem 0;
         }
-        .bottom{
+        .bottom {
             display: flex;
             justify-content: space-between;
-            .copy{
-                color: var(--color-secondary);
+            align-items: center;
+            @media (max-width: $md) {
+                flex-direction: column-reverse;
+                gap: 2rem;
             }
-            .icons{
+            .copy {
+                color: var(--color-secondary);
+                @media (max-width: $md) {
+                    text-align: center;
+                }
+            }
+            .icons {
                 display: flex;
                 gap: 1rem;
-                .item{
+                .item {
                     font-size: 1.5rem;
                     cursor: pointer;
                     transition: 350ms;
@@ -89,12 +120,11 @@
                     align-items: center;
                     justify-content: center;
                     border-radius: 7px;
-                    &:hover{
+                    &:hover {
                         background: #e0e0e0;
-                        box-shadow:  20px 20px 60px #bebebe,
-                                    -20px -20px 60px #ffffff;
+                        box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
                         color: #000;
-                                }
+                    }
                 }
             }
         }

@@ -23,7 +23,7 @@ export const Footer = () => {
             <div className={css.logo}>
               <LogoG />
             </div>
-            <div className={`secondaryText ${css.text}`}>
+            <div className={`${css.text}`}>
               Building breathtaking pools. Expertise, commitment, quality
               guaranteed.
             </div>
