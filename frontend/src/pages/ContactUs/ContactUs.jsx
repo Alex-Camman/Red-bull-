@@ -51,9 +51,7 @@ export const ContactUs = () => {
                 <label>Name</label>
                 <input
                   type="text"
-                  placeholder="
-                  Your Name
-                  "
+                  placeholder="Your Name"
                   {...register("name", {
                     required: true,
                     maxLength: 40,
@@ -70,9 +68,7 @@ export const ContactUs = () => {
                 <label>Email</label>
                 <input
                   type="email"
-                  placeholder="
-                  Your Email
-                  "
+                  placeholder="Your Email"
                   {...register("email", {
                     pattern: /^\S+@\S+$/i,
                   })}
@@ -84,12 +80,8 @@ export const ContactUs = () => {
               <div className="formItem">
                 <label>Phone Number</label>
                 <input
-                  type="
-                  tel
-                  "
-                  placeholder="
-                    Your phone number
-                  "
+                  type="tel"
+                  placeholder="Your phone number"
                   {...register("phone", {
                     required: true,
                     maxLength: 40,
@@ -106,9 +98,7 @@ export const ContactUs = () => {
                 <label>Subject</label>
                 <input
                   type="text"
-                  placeholder="
-                  Subject of the message
-                  "
+                  placeholder="Subject of the message"
                   {...register("subject", {
                     required: true,
                     maxLength: 40,
@@ -126,9 +116,7 @@ export const ContactUs = () => {
                 <textarea
                   cols="20"
                   rows="5"
-                  placeholder="
-                  Your Message
-                  "
+                  placeholder="Your Message"
                   {...register("message", {
                     required: true,
                   })}
@@ -138,7 +126,7 @@ export const ContactUs = () => {
                 )}
               </div>
               <div className={css.btn}>
-                <input type="submit" value="Enviar" className="btnCursos" />
+                <input type="submit" value="Enviar" />
               </div>
             </form>
           </div>
