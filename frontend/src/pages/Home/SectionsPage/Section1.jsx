@@ -1,5 +1,13 @@
 import React from "react";
 
 export const Section1 = () => {
-  return <div>Section1</div>;
+  return (
+    <div
+      style={{
+        backgroundColor: "white",
+      }}
+    >
+      Section1
+    </div>
+  );
 };

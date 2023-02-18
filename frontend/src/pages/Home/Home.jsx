@@ -6,7 +6,7 @@ export const Home = () => {
       <div
         style={{
           height: "100vh",
-          backgroundColor: "gray",
+          backgroundColor: "white",
         }}
       >
         ahsjha

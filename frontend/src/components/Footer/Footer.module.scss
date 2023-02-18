@@ -1,8 +1,8 @@
 @import '../../scss/abstracts/variables';
 
 .wrapper{
-    background: var(--color-primary);
-    color: rgb(255, 255, 255);
+    background: #ffffff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     .container{
         gap: 2rem;
         @media (max-width: $sm) {
@@ -25,18 +25,24 @@
                 }
                 .text{
                     width: 80%;
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                    color: var(--color-secondary);
                 }
             }
             h4{
                 font-size: 1.5rem;
                 font-weight: 500;
                 margin-bottom: 1rem;
+                color: var(--color-secondary);
             }
             .services{
                 ul{
                     li{
                         font-size: 1.1rem;
                         margin-bottom: 1rem;
+                        color: var(--color-text);
+                        
                     }
                 }
             }
@@ -46,7 +52,7 @@
                         display: flex;
                         align-items: center;
                         margin-bottom: 1rem;
-
+                        color: var(--color-text);
                         span{
                             font-size: 24px;
                             margin-right: 0.5rem;
@@ -59,19 +65,36 @@
             }
         }
         hr{
-            border: 1px solid rgb(255, 255, 255);
-            opacity: 0.2;
+            border: 1px solid var(--color-primary);
+            background-color: var(--color-primary);
+            opacity: 0.4;
             margin: 2rem 0;
         }
         .bottom{
             display: flex;
             justify-content: space-between;
+            .copy{
+                color: var(--color-secondary);
+            }
             .icons{
                 display: flex;
                 gap: 1rem;
                 .item{
                     font-size: 1.5rem;
                     cursor: pointer;
+                    transition: 350ms;
+                    color: var(--color-text);
+                    padding: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 7px;
+                    &:hover{
+                        background: #e0e0e0;
+                        box-shadow:  20px 20px 60px #bebebe,
+                                    -20px -20px 60px #ffffff;
+                        color: #000;
+                                }
                 }
             }
         }

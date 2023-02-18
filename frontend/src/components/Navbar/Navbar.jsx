@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { LogoFc } from "../../assets/svgs";
+import { LogoFc, LogoG } from "../../assets/svgs";
 import css from "./Navbar.module.scss";
 import { BiMenuAltRight } from "react-icons/bi";
 import { motion } from "framer-motion";
@@ -35,7 +35,7 @@ export const Navbar = () => {
     >
       <div className={`innerWidth ${css.container} flexCenter`}>
         <div className={css.logo} onClick={() => goToPage("/")}>
-          <LogoFc />
+          <LogoG />
         </div>
         <ul
           className={`flexCenter ${css.menu}`}
@@ -46,7 +46,7 @@ export const Navbar = () => {
             <NavLink
               to="/"
               style={({ isActive }) => ({
-                color: isActive ? "#2F3AB4" : undefined,
+                color: isActive ? "#4d4d4d" : undefined,
               })}
             >
               Home
@@ -56,7 +56,7 @@ export const Navbar = () => {
             <NavLink
               to="/About"
               style={({ isActive }) => ({
-                color: isActive ? "#2F3AB4" : undefined,
+                color: isActive ? "#4d4d4d" : undefined,
               })}
             >
               About Us
@@ -66,7 +66,7 @@ export const Navbar = () => {
             <NavLink
               to="/Services"
               style={({ isActive }) => ({
-                color: isActive ? "#2F3AB4" : undefined,
+                color: isActive ? "#4d4d4d" : undefined,
               })}
             >
               Services
@@ -76,7 +76,7 @@ export const Navbar = () => {
             <NavLink
               to="/Gallery"
               style={({ isActive }) => ({
-                color: isActive ? "#2F3AB4" : undefined,
+                color: isActive ? "#4d4d4d" : undefined,
               })}
             >
               Gallery
@@ -86,7 +86,7 @@ export const Navbar = () => {
             <NavLink
               to="/Contact"
               style={({ isActive }) => ({
-                color: isActive ? "#2F3AB4" : undefined,
+                color: isActive ? "#4d4d4d" : undefined,
               })}
             >
               Contact Us
@@ -99,7 +99,10 @@ export const Navbar = () => {
           className={css.menuIcon}
           onClick={() => setMenuOpened(!menuOpened)}
         >
-          <BiMenuAltRight size={30} />
+          <BiMenuAltRight
+            size={30}
+            color={menuOpened ? "#595858" : "#4d4d4d"}
+          />
         </div>
       </div>
     </motion.div>

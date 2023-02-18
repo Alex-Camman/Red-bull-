@@ -1,5 +1,5 @@
 import css from "./Footer.module.scss";
-import { LogoW } from "../../assets/svgs";
+import { LogoW, LogoFc, LogoG } from "../../assets/svgs";
 import { motion } from "framer-motion";
 import { footerVariants, staggerChildren } from "../../utils/motion";
 import { HiOutlineMail, HiPhone, HiLocationMarker } from "react-icons/hi";
@@ -21,7 +21,7 @@ export const Footer = () => {
         <div className={`${css.top}`}>
           <div className={`${css.brand}`}>
             <div className={css.logo}>
-              <LogoW />
+              <LogoG />
             </div>
             <div className={`secondaryText ${css.text}`}>
               Building breathtaking pools. Expertise, commitment, quality
