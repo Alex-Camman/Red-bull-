@@ -1,12 +1,25 @@
 .wrapper{
     .container{
         display: flex;
+        h2{
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--color-secondary);
+            margin-bottom: 1rem;
+        }
+        p{
+            font-size: 1rem;
+            color: var(--color-text);
+            margin-bottom: 1rem;
+        }
         .left{
             width: 50%;
         }
         .right{
             width: 50%;
-
+            .formContainer{
+                margin-top: 3rem;
+            }
         }
     }
 }
