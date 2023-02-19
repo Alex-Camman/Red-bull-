@@ -38,7 +38,16 @@ export const ContactUs = () => {
             Do not hesitate to get in touch with us to start building the pool
             of your dreams!
           </p>
-          <div className={css.map}>map</div>
+          <div className={css.map}>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63350.39106553666!2d-117.79869055698174!3d34.05690345314702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c32def799fa121%3A0x5209947000caa933!2sPomona%2C%20California%2C%20EE.%20UU.!5e0!3m2!1ses!2smx!4v1676827282842!5m2!1ses!2smx"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
           <div className={css.info}>
             <div className={css.item}>
               <HiLocationMarker />
