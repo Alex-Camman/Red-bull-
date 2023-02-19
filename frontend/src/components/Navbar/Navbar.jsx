@@ -31,7 +31,7 @@ export const Navbar = () => {
       whileInView="show"
       className={`${css.wrapper}`}
       viewport={{ once: false, amount: 0.25 }}
-      style={{ boxShadow: headerShadow }}
+      // style={{ boxShadow: headerShadow }}
     >
       <div className={`innerWidth ${css.container} flexCenter`}>
         <div className={css.logo} onClick={() => goToPage("/")}>

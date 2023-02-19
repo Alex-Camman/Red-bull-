@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import {
   footerVariants,
   staggerChildren,
-  textVariant,
   textVariant2,
 } from "../../utils/motion";
 import { HiLocationMarker, HiPhone, HiMail } from "react-icons/hi";
@@ -34,10 +33,10 @@ export const ContactUs = () => {
       >
         <div className={css.left}>
           <h2 className={css.titleOne}>Get In Touch</h2>
-          <p>
+          <motion.div variants={textVariant2} className={css.txt}>
             Do not hesitate to get in touch with us to start building the pool
             of your dreams!
-          </p>
+          </motion.div>
           <div className={css.map}>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63350.39106553666!2d-117.79869055698174!3d34.05690345314702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c32def799fa121%3A0x5209947000caa933!2sPomona%2C%20California%2C%20EE.%20UU.!5e0!3m2!1ses!2smx!4v1676827282842!5m2!1ses!2smx"
@@ -65,10 +64,10 @@ export const ContactUs = () => {
         </div>
         <div className={css.right}>
           <h2 className={css.titleTwo}>Contact Us</h2>
-          <p>
+          <motion.div variants={textVariant2} className={css.txt}>
             Our team of professionals is here to assist you in any way that you
             need.
-          </p>
+          </motion.div>
           <div className={css.formContainer}>
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="formItem">

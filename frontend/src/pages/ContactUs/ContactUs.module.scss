@@ -1,14 +1,19 @@
+@import "../../scss/abstracts/variables";
+
 .wrapper{
     .container{
         display: flex;
         letter-spacing: 1px;
+        @media (max-width: $md) {
+            flex-direction: column;
+        }
         h2{
             font-size: 2rem;
             font-weight: 600;
             color: var(--color-secondary);
             margin-bottom: 1rem;
         }
-        p{
+        .txt{
             font-size: 1rem;
             color: var(--color-text);
             margin-bottom: 1rem;
@@ -16,6 +21,11 @@
         .left{
             width: 50%;
             padding: 0 5% 0 0;
+            @media (max-width: $md) {
+                width: 100%;
+                padding: 0;
+                margin-bottom: 3rem;
+            }
             .map{
                 margin-top: 3rem;
                 background-color: rgb(74, 74, 206);
@@ -42,6 +52,10 @@
         .right{
             width: 50%;
             padding: 0 0 0 5%;
+            @media (max-width: $md) {
+                width: 100%;
+                padding: 0;
+            }
             .formContainer{
                 margin-top: 3rem;
                 .btn {
