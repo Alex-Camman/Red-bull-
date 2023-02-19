@@ -38,6 +38,21 @@ export const ContactUs = () => {
             Do not hesitate to get in touch with us to start building the pool
             of your dreams!
           </p>
+          <div className={css.map}>map</div>
+          <div className={css.info}>
+            <div className={css.item}>
+              <HiLocationMarker />
+              Pomona, CA 91766
+            </div>
+            <div className={css.item}>
+              <HiPhone />
+              (909) 630-3576, (909) 506-7025
+            </div>
+            <div className={css.item}>
+              <HiMail />
+              franciscocazaressteel@hotmail.com
+            </div>
+          </div>
         </div>
         <div className={css.right}>
           <h2 className={css.titleTwo}>Contact Us</h2>
