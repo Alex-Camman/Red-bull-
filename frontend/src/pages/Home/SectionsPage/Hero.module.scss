@@ -1,9 +1,14 @@
+@import "@scss/abstracts/variables";
+
 .wrapper {
   height: 90vh;
-  background-image: url("../../../assets/images/hero.png");
+  background-image: url("@assets/images/hero.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  @media (max-width: $md) {
+    background-size: cover;
+  }
   .container {
     letter-spacing: 1px;
   }
