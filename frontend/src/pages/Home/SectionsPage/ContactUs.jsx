@@ -1,11 +1,7 @@
 import { useForm } from "react-hook-form";
 import css from "./ContactUs.module.scss";
 import { motion } from "framer-motion";
-import {
-  footerVariants,
-  staggerChildren,
-  textVariant2,
-} from "../../utils/motion";
+import { footerVariants, staggerChildren, textVariant2 } from "@utils/motion";
 import { HiLocationMarker, HiPhone, HiMail } from "react-icons/hi";
 
 export const ContactUs = () => {

@@ -72,16 +72,7 @@ export const Navbar = () => {
               Services
             </NavLink>
           </li>
-          <li onClick={() => setMenuOpened(!menuOpened)}>
-            <NavLink
-              to="/Gallery"
-              style={({ isActive }) => ({
-                color: isActive ? "#4d4d4d" : undefined,
-              })}
-            >
-              Gallery
-            </NavLink>
-          </li>
+
           <li onClick={() => setMenuOpened(!menuOpened)}>
             <NavLink
               to="/Contact"
@@ -90,6 +81,16 @@ export const Navbar = () => {
               })}
             >
               Contact Us
+            </NavLink>
+          </li>
+          <li onClick={() => setMenuOpened(!menuOpened)}>
+            <NavLink
+              to="/Gallery"
+              style={({ isActive }) => ({
+                color: isActive ? "#4d4d4d" : undefined,
+              })}
+            >
+              Gallery
             </NavLink>
           </li>
         </ul>
