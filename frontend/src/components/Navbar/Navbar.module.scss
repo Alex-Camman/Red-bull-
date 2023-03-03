@@ -1,12 +1,12 @@
 @import "../../scss//abstracts/variables";
 
 .wrapper {
-  position: relative;
   z-index: 99;
   opacity: 1;
-  transform: none;
-  position: sticky;
-  top: 0px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
   transition: all 300ms ease;
   background: white;
   padding: 1rem 1.5rem;
