@@ -24,8 +24,7 @@ export const Hero = () => {
           </h1>
           <h3 className={css.description}>
             We are your go-to experts in building steel frames and excavating
-            for swimming pools. With years of experience and a dedication to
-            quality, we will make sure your dream pool becomes a reality.
+            for swimming pools.
           </h3>
           <div className={css.containerBtn}>
             <button className={css.btn}>Get a quote</button>
