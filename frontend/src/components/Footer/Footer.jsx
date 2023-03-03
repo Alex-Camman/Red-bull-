@@ -24,8 +24,9 @@ export const Footer = () => {
               <LogoG />
             </div>
             <div className={`${css.text}`}>
-              Building breathtaking pools. Expertise, commitment, quality
-              guaranteed.
+              We specialize in building steel frames and excavating for swimming
+              pools, providing expert craftsmanship and superior customer
+              service.
             </div>
           </div>
           <div className={`${css.services}`}>

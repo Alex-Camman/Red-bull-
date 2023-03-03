@@ -1,162 +1,163 @@
 @import "../../scss/abstracts/variables";
 
 .wrapper {
-    background: #ffffff;
-    box-shadow:rgba(0, 0, 0, 0.1) 4px -1px 10px -1px, rgba(0, 0, 0, 0.226) 4px 4px 4px 1px;
-    
-    .container {
-        gap: 2rem;
-        letter-spacing: 1px;
-        @media (max-width: $sm) {
-            flex-direction: column;
-            gap: 2rem;
-            align-items: flex-start;
-        }
-        .top {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            @media (max-width: $lg) {
-                flex-direction: column;
-                gap: 2rem;
-                align-items: center;
-            }
-            @media (max-width: $sm) {
-                align-items: flex-start;
-            }
-            .brand {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                @media (max-width: $xl) {
-                    width: 40%;
-                }
-                @media (max-width: $lg) {
-                    width: 60%;
-                    text-align: center;
-                    align-items: center;
-                }
-                @media (max-width: $sm) {
-                    width: 100%;
-                    align-items: flex-start;
-                    text-align: left;
-                }
-                .logo {
-                    svg {
-                        width: 300px;
-                    }
-                }
-                .text {
-                    width: 80%;
-                    font-size: 1.1rem;
-                    font-weight: 500;
-                    color: var(--color-secondary);
-                    line-height: 30px;
-                    font-size: 1.3rem;
-                    font-weight: 500;
-                    @media (max-width: $xl) {
-                        width: 100%;
-                    }
-                    @media (max-width: $sm) {
-                        font-size: 1.1rem;
-                        line-height: 40px;
-                    }
-                }
-            }
-            h4 {
-                font-size: 1.5rem;
-                font-weight: 500;
-                margin-bottom: 1rem;
-                color: var(--color-secondary);
-                @media (max-width: $lg) {
-                    text-align: center; 
-                }
-                @media (max-width: $sm) {
-                    text-align: left;
-                }
-            }
-            .services {
-                ul {
-                    @media (max-width: $lg) {
-                        text-align: center; 
-                    }
-                    @media (max-width: $sm) {
-                        text-align: left;
-                    }
-                    li {
-                        font-size: 1.1rem;
-                        margin-bottom: 1rem;
-                        color: var(--color-text);
-                    }
-                }
-            }
-            .contact {
-                
-                ul {
-                    @media (max-width: $lg) {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
-                    }
-                    @media (max-width: $sm) {
-                        align-items: flex-start;
-                    }
-                    li {
-                        display: flex;
-                        align-items: center;
-                        margin-bottom: 1rem;
-                        color: var(--color-text);
-                        span {
-                            font-size: 24px;
-                            margin-right: 0.5rem;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                        }
-                    }
-                }
-            }
-        }
-        hr {
-            border: 1px solid var(--color-primary);
-            background-color: var(--color-primary);
-            margin: 2rem 0;
-        }
-        .bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            @media (max-width: $md) {
-                flex-direction: column-reverse;
-                gap: 2rem;
-            }
-            .copy {
-                color: var(--color-secondary);
-                @media (max-width: $md) {
-                    text-align: center;
-                }
-            }
-            .icons {
-                display: flex;
-                gap: 1rem;
-                .item {
-                    font-size: 1.5rem;
-                    cursor: pointer;
-                    transition: 350ms;
-                    color: var(--color-text);
-                    padding: 10px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border-radius: 7px;
-                    &:hover {
-                        background: #e0e0e0;
-                        box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
-                        color: #000;
-                    }
-                }
-            }
-        }
+  background: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.1) 4px -1px 10px -1px,
+    rgba(0, 0, 0, 0.226) 4px 4px 4px 1px;
+
+  .container {
+    gap: 2rem;
+    letter-spacing: 1px;
+    @media (max-width: $sm) {
+      flex-direction: column;
+      gap: 2rem;
+      align-items: flex-start;
     }
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1.5rem;
+      @media (max-width: $lg) {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+      }
+      @media (max-width: $sm) {
+        align-items: flex-start;
+      }
+      .brand {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 50%;
+        @media (max-width: $xl) {
+          width: 40%;
+        }
+        @media (max-width: $lg) {
+          width: 60%;
+          text-align: center;
+          align-items: center;
+        }
+        @media (max-width: $sm) {
+          width: 100%;
+          align-items: flex-start;
+          text-align: left;
+        }
+        .logo {
+          svg {
+            width: 300px;
+          }
+        }
+        .text {
+          width: 90%;
+          font-size: 16px;
+          font-weight: 500;
+          color: var(--color-secondary);
+          line-height: 30px;
+          font-weight: 500;
+          @media (max-width: $xl) {
+            width: 100%;
+          }
+          @media (max-width: $sm) {
+            line-height: 40px;
+          }
+        }
+      }
+      h4 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+        color: var(--color-secondary);
+        @media (max-width: $lg) {
+          text-align: center;
+        }
+        @media (max-width: $sm) {
+          text-align: left;
+        }
+      }
+      .services {
+        ul {
+          @media (max-width: $lg) {
+            text-align: center;
+          }
+          @media (max-width: $sm) {
+            text-align: left;
+          }
+          li {
+            font-size: 14px;
+            margin-bottom: 1rem;
+            color: var(--color-text);
+          }
+        }
+      }
+      .contact {
+        ul {
+          @media (max-width: $lg) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+          }
+          @media (max-width: $sm) {
+            align-items: flex-start;
+          }
+          li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            color: var(--color-text);
+            span {
+              font-size: 24px;
+              margin-right: 0.5rem;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+    hr {
+      border: 1px solid var(--color-primary);
+      background-color: var(--color-primary);
+      margin: 2rem 0;
+    }
+    .bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @media (max-width: $md) {
+        flex-direction: column-reverse;
+        gap: 2rem;
+        font-size: 14px;
+      }
+      .copy {
+        color: var(--color-secondary);
+        @media (max-width: $md) {
+          text-align: center;
+        }
+      }
+      .icons {
+        display: flex;
+        gap: 1rem;
+        .item {
+          font-size: 1.5rem;
+          cursor: pointer;
+          transition: 350ms;
+          color: var(--color-text);
+          padding: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 7px;
+          &:hover {
+            background: #e0e0e0;
+            box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+            color: #000;
+          }
+        }
+      }
+    }
+  }
 }
