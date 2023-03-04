@@ -42,6 +42,24 @@ export const AboutUs = () => {
             <img src={about} alt={Math.random() > 0.5 ? "about" : "about2"} />
           </div>
         </div>
+        <div className={css.stats}>
+          <div className={css.stat}>
+            <h3>10+</h3>
+            <p>Years of experience</p>
+          </div>
+          <div className={css.stat}>
+            <h3>100+</h3>
+            <p>Projects completed</p>
+          </div>
+          <div className={css.stat}>
+            <h3>12+</h3>
+            <p>Years of experience</p>
+          </div>
+          <div className={css.stat}>
+            <h3>12+</h3>
+            <p>Team members</p>
+          </div>
+        </div>
       </motion.div>
     </motion.section>
   );

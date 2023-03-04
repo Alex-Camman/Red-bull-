@@ -48,8 +48,8 @@
       @media (max-width: $sm), (max-width: $md) {
         font-size: 1rem;
         border-radius: 50px;
-        background: #e0e0e0;
-        box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+        background: linear-gradient(145deg, #f0f0f0, #cacaca);
+        box-shadow: 10px 10px 21px #c1c1c1, -10px -10px 21px #ffffff;
         position: absolute;
         list-style: none;
         gap: 2rem;
