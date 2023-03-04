@@ -2,8 +2,13 @@ import css from "./AboutUs.module.scss";
 import { motion } from "framer-motion";
 import { footerVariants, staggerChildren, textVariant2 } from "@utils/motion";
 import about from "@assets/images/about.jpg";
+import CountUp from "react-countup";
+import ScrollTrigger from "react-scroll-trigger";
+import { useState } from "react";
 
 export const AboutUs = () => {
+  const [counterOn, setCounterOn] = useState(false);
+
   return (
     <motion.section
       variants={staggerChildren}
@@ -42,24 +47,51 @@ export const AboutUs = () => {
             <img src={about} alt={Math.random() > 0.5 ? "about" : "about2"} />
           </div>
         </div>
-        <div className={css.stats}>
-          <div className={css.stat}>
-            <h3>10+</h3>
-            <p>Years of experience</p>
+        <ScrollTrigger
+          onEnter={() => setCounterOn(true)}
+          onExit={() => setCounterOn(false)}
+        >
+          <div className={css.stats}>
+            <div className={css.stat}>
+              <h3>
+                {counterOn && (
+                  <CountUp start={0} end={100} duration={2} delay={0} />
+                )}
+                +
+              </h3>
+              <p>Projects completed</p>
+            </div>
+            <div className={css.stat}>
+              <h3>
+                {counterOn && (
+                  <CountUp start={0} end={12} duration={2} delay={0} />
+                )}
+                +
+              </h3>
+              <p>Years of experience</p>
+            </div>
+            <div className={css.stat}>
+              <h3>
+                {counterOn && (
+                  <CountUp start={0} end={100} duration={2} delay={0} />
+                )}
+                %
+              </h3>
+              <p>
+                Clients <br /> satisfaction
+              </p>
+            </div>
+            <div className={css.stat}>
+              <h3>
+                {counterOn && (
+                  <CountUp start={0} end={20} duration={2} delay={0} />
+                )}
+                +
+              </h3>
+              <p>Team members</p>
+            </div>
           </div>
-          <div className={css.stat}>
-            <h3>100+</h3>
-            <p>Projects completed</p>
-          </div>
-          <div className={css.stat}>
-            <h3>12+</h3>
-            <p>Years of experience</p>
-          </div>
-          <div className={css.stat}>
-            <h3>12+</h3>
-            <p>Team members</p>
-          </div>
-        </div>
+        </ScrollTrigger>
       </motion.div>
     </motion.section>
   );
