@@ -1,11 +1,6 @@
 import css from "./ServicesSection.module.scss";
 import { motion } from "framer-motion";
-import {
-  footerVariants,
-  staggerChildren,
-  textVariant,
-  fadeIn,
-} from "@utils/motion";
+import { staggerChildren, textVariant2, fadeIn } from "@utils/motion";
 import service1 from "@assets/images/service1.jpg";
 import service2 from "@assets/images/service2.jpg";
 import { AiFillTool } from "react-icons/ai";
@@ -22,15 +17,12 @@ export const ServicesSection = () => {
       className={`paddings ${css.wrapper}`}
     >
       <div className={`yPaddings innerWidth ${css.container}`}>
-        <motion.div variants={textVariant(0.4)} className={css.titleSection}>
+        <div className={css.titleSection}>
           <h2>Services</h2>
           <hr />
-        </motion.div>
-        <motion.div
-          className={css.content}
-          variants={fadeIn("up", "tween", 0.5, 0.6)}
-        >
-          <div className={css.card}>
+        </div>
+        <div className={css.content}>
+          <motion.div variants={textVariant2} className={css.card}>
             <div className={css.info}>
               <h3>
                 Steel Frame Pools
@@ -47,8 +39,8 @@ export const ServicesSection = () => {
               <img src={service1} alt={Math.random()} />
               <div className={css.textImage}>FC Steel Inc</div>
             </div>
-          </div>
-          <div variants={fadeIn("up", "tween", 0.9, 0.6)} className={css.card}>
+          </motion.div>
+          <motion.div variants={textVariant2} className={css.card}>
             <div className={css.info}>
               <h3>
                 Excavation
@@ -72,8 +64,8 @@ export const ServicesSection = () => {
               <img src={service2} alt={Math.random()} />
               <div className={css.textImage}>FC Steel Inc</div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
     </motion.section>
   );

@@ -1,6 +1,6 @@
 import css from "./AboutUs.module.scss";
 import { motion } from "framer-motion";
-import { footerVariants, staggerChildren, textVariant2 } from "@utils/motion";
+import { staggerChildren, textVariant2 } from "@utils/motion";
 import about from "@assets/images/about.jpg";
 import CountUp from "react-countup";
 import ScrollTrigger from "react-scroll-trigger";
@@ -18,16 +18,13 @@ export const AboutUs = () => {
       section
       className={`paddings ${css.wrapper}`}
     >
-      <motion.div
-        variants={footerVariants}
-        className={`yPaddings innerWidth ${css.container}`}
-      >
+      <div className={`yPaddings innerWidth ${css.container}`}>
         <div className={css.content}>
           <div className={css.left}>
-            <div className={css.titleSection}>
+            <motion.div variants={textVariant2} className={css.titleSection}>
               <h2>About Us</h2>
               <hr />
-            </div>
+            </motion.div>
             <p>
               At FC Steel, we are passionate about creating beautiful and
               functional swimming pools that exceed our clients' expectations.
@@ -52,7 +49,7 @@ export const AboutUs = () => {
           onExit={() => setCounterOn(false)}
         >
           <div className={css.stats}>
-            <div className={css.stat}>
+            <motion.div variants={textVariant2} className={css.stat}>
               <h3>
                 {counterOn && (
                   <CountUp start={0} end={100} duration={2} delay={0} />
@@ -60,8 +57,8 @@ export const AboutUs = () => {
                 +
               </h3>
               <p>Projects completed</p>
-            </div>
-            <div className={css.stat}>
+            </motion.div>
+            <motion.div variants={textVariant2} className={css.stat}>
               <h3>
                 {counterOn && (
                   <CountUp start={0} end={12} duration={2} delay={0} />
@@ -69,8 +66,8 @@ export const AboutUs = () => {
                 +
               </h3>
               <p>Years of experience</p>
-            </div>
-            <div className={css.stat}>
+            </motion.div>
+            <motion.div variants={textVariant2} className={css.stat}>
               <h3>
                 {counterOn && (
                   <CountUp start={0} end={100} duration={2} delay={0} />
@@ -80,8 +77,8 @@ export const AboutUs = () => {
               <p>
                 Clients <br /> satisfaction
               </p>
-            </div>
-            <div className={css.stat}>
+            </motion.div>
+            <motion.div variants={textVariant2} className={css.stat}>
               <h3>
                 {counterOn && (
                   <CountUp start={0} end={20} duration={2} delay={0} />
@@ -89,10 +86,10 @@ export const AboutUs = () => {
                 +
               </h3>
               <p>Team members</p>
-            </div>
+            </motion.div>
           </div>
         </ScrollTrigger>
-      </motion.div>
+      </div>
     </motion.section>
   );
 };
