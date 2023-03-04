@@ -1,0 +1,86 @@
+@import "@scss/abstracts/variables";
+
+.olasContainer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 130px;
+  overflow: hidden;
+  @media (max-width: $sm) {
+    height: 350px;
+  }
+}
+
+.olaUno,
+.olaDos,
+.olaTres {
+  position: absolute;
+  width: 1000px;
+  height: 100px;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  @media (max-width: $sm) {
+    height: 300px;
+  }
+}
+
+.olaUno {
+  bottom: -50px;
+  left: 25%;
+  background-color: #00bfff;
+  animation-name: moveWaveUno;
+}
+
+.olaDos {
+  bottom: -70px;
+  left: 50%;
+  background-color: #00bfff;
+  animation-name: moveWaveDos;
+}
+
+.olaTres {
+  bottom: -60px;
+  left: 75%;
+  background-color: #00bfff;
+  animation-name: moveWaveTres;
+}
+
+@keyframes moveWaveUno {
+  0% {
+    transform: translate(-50%, 0) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50px) scale(1.2);
+  }
+  100% {
+    transform: translate(-50%, 0) scale(1);
+  }
+}
+
+@keyframes moveWaveDos {
+  0% {
+    transform: translate(-50%, 0) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -70px) scale(1.2);
+  }
+  100% {
+    transform: translate(-50%, 0) scale(1);
+  }
+}
+
+@keyframes moveWaveTres {
+  0% {
+    transform: translate(-50%, 0) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -60px) scale(1.2);
+  }
+  100% {
+    transform: translate(-50%, 0) scale(1);
+  }
+}
