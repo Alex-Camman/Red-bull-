@@ -7,6 +7,8 @@ import "swiper/css/effect-cards";
 // import required modules
 import { EffectCards } from "swiper";
 import { Olas } from "@components/Home";
+import { staggerContainer, slideIn, fadeIn } from "@utils/motion";
+import { motion } from "framer-motion";
 
 const images = [
   "/assets/hero/h1.jpg",
@@ -19,8 +21,17 @@ export const Hero = () => {
   return (
     <>
       <section className={`paddings ${css.wrapper}`}>
-        <div className={`innerWidth ${css.container}`}>
-          <div className={css.left}>
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.25 }}
+          className={`innerWidth ${css.container}`}
+        >
+          <motion.div
+            variants={fadeIn("right", "tween", 0.2, 1)}
+            className={css.left}
+          >
             <h1 className={css.title}>
               Let us build your dream pool with precision and expertise.
             </h1>
@@ -31,8 +42,11 @@ export const Hero = () => {
             <div className={css.containerBtn}>
               <button className={css.btn}>Get a quote</button>
             </div>
-          </div>
-          <div className={css.right}>
+          </motion.div>
+          <motion.div
+            variants={fadeIn("left", "tween", 0.2, 1)}
+            className={css.right}
+          >
             <Swiper
               effect={"cards"}
               grabCursor={true}
@@ -45,8 +59,8 @@ export const Hero = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
         <Olas />
       </section>
     </>
