@@ -1,0 +1,89 @@
+@import "@scss/abstracts/variables";
+
+.wrapper {
+  background-color: white;
+  .container {
+    letter-spacing: 1px;
+    .titleSection {
+      h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        color: var(--color-secondary);
+        margin-bottom: 1rem;
+      }
+      hr {
+        background-color: var(--color-primary);
+        border: none;
+        color: var(--color-primary);
+        width: 50px;
+        height: 2px;
+        margin-top: 10px;
+      }
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 2rem;
+      gap: 1.5rem;
+      .card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        border-radius: 18px;
+        border: 2px solid var(--color-primary);
+        @media (max-width: $md) {
+          flex-direction: column;
+        }
+        .info {
+          width: 70%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 1rem;
+          padding: 1rem;
+          @media (max-width: $md) {
+            width: 100%;
+          }
+          h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-secondary);
+          }
+          p {
+            font-size: 1rem;
+            color: var(--color-text);
+            line-height: 1.6;
+          }
+          //modificando el estilo del ultimo p
+          span {
+            font-size: 0.9rem;
+            color: var(--color-text);
+            line-height: 1.6;
+            @media (max-width: $lg) {
+              display: none;
+            }
+          }
+        }
+        .image {
+          width: 30%;
+          padding: 1rem;
+          @media (max-width: $md) {
+            width: 100%;
+          }
+          img {
+            width: 100%;
+            max-height: 200px;
+            height: 100%;
+            border-radius: 18px;
+            object-fit: cover;
+            @media (max-width: $md) {
+              max-height: 250px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
