@@ -1,4 +1,10 @@
-import { Hero, ContactUs, AboutUs, ServicesSection } from "./SectionsPage";
+import {
+  Hero,
+  ContactUs,
+  AboutUs,
+  ServicesSection,
+  WithUs,
+} from "./SectionsPage";
 
 export const Home = () => {
   return (
@@ -6,6 +12,7 @@ export const Home = () => {
       <Hero />
       <AboutUs />
       <ServicesSection />
+      <WithUs />
       <ContactUs />
     </>
   );
