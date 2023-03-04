@@ -4,6 +4,7 @@ import {
   AboutUs,
   ServicesSection,
   WithUs,
+  Testimonials,
 } from "./SectionsPage";
 
 export const Home = () => {
@@ -13,6 +14,7 @@ export const Home = () => {
       <AboutUs />
       <ServicesSection />
       <WithUs />
+      <Testimonials />
       <ContactUs />
     </>
   );
