@@ -1,6 +1,11 @@
 import css from "./ServicesSection.module.scss";
 import { motion } from "framer-motion";
-import { footerVariants, staggerChildren, textVariant2 } from "@utils/motion";
+import {
+  footerVariants,
+  staggerChildren,
+  textVariant,
+  fadeIn,
+} from "@utils/motion";
 import service1 from "@assets/images/service1.jpg";
 import service2 from "@assets/images/service2.jpg";
 
@@ -14,15 +19,15 @@ export const ServicesSection = () => {
       section
       className={`paddings ${css.wrapper}`}
     >
-      <motion.div
-        variants={footerVariants}
-        className={`yPaddings innerWidth ${css.container}`}
-      >
-        <div className={css.titleSection}>
+      <div className={`yPaddings innerWidth ${css.container}`}>
+        <motion.div variants={textVariant(0.4)} className={css.titleSection}>
           <h2>Services</h2>
           <hr />
-        </div>
-        <div className={css.content}>
+        </motion.div>
+        <motion.div
+          className={css.content}
+          variants={fadeIn("up", "tween", 0.5, 0.6)}
+        >
           <div className={css.card}>
             <div className={css.info}>
               <h3>Steel Frame Pools</h3>
@@ -37,7 +42,7 @@ export const ServicesSection = () => {
               <img src={service1} alt={Math.random()} />
             </div>
           </div>
-          <div className={css.card}>
+          <div variants={fadeIn("up", "tween", 0.9, 0.6)} className={css.card}>
             <div className={css.info}>
               <h3>Excavation</h3>
               <p>
@@ -58,8 +63,8 @@ export const ServicesSection = () => {
               <img src={service2} alt={Math.random()} />
             </div>
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </motion.section>
   );
 };
