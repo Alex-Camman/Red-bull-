@@ -8,6 +8,8 @@ import {
 } from "@utils/motion";
 import service1 from "@assets/images/service1.jpg";
 import service2 from "@assets/images/service2.jpg";
+import { AiFillTool } from "react-icons/ai";
+import { AiOutlineGateway } from "react-icons/ai";
 
 export const ServicesSection = () => {
   return (
@@ -30,7 +32,10 @@ export const ServicesSection = () => {
         >
           <div className={css.card}>
             <div className={css.info}>
-              <h3>Steel Frame Pools</h3>
+              <h3>
+                Steel Frame Pools
+                <AiFillTool className={css.icon} />
+              </h3>
               <p>
                 We specialize in building steel frames for swimming pools,
                 providing superior craftsmanship and attention to detail. Our
@@ -45,7 +50,10 @@ export const ServicesSection = () => {
           </div>
           <div variants={fadeIn("up", "tween", 0.9, 0.6)} className={css.card}>
             <div className={css.info}>
-              <h3>Excavation</h3>
+              <h3>
+                Excavation
+                <AiOutlineGateway className={css.icon} />
+              </h3>
               <p>
                 Our pool excavation services are designed to help you create the
                 perfect foundation for your pool. We use the latest excavation

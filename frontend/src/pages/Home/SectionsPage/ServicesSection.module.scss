@@ -58,6 +58,13 @@
             font-size: 1.5rem;
             font-weight: 600;
             color: var(--color-secondary);
+            display: flex;
+            align-items: center;
+            .icon {
+              font-size: 2rem;
+              margin-left: 0.5rem;
+              color: var(--color-primary);
+            }
           }
           p {
             font-size: 1rem;
