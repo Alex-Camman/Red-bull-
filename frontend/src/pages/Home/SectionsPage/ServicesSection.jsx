@@ -40,6 +40,7 @@ export const ServicesSection = () => {
             </div>
             <div className={css.image}>
               <img src={service1} alt={Math.random()} />
+              <div className={css.textImage}>FC Steel Inc</div>
             </div>
           </div>
           <div variants={fadeIn("up", "tween", 0.9, 0.6)} className={css.card}>
@@ -61,6 +62,7 @@ export const ServicesSection = () => {
             </div>
             <div className={css.image}>
               <img src={service2} alt={Math.random()} />
+              <div className={css.textImage}>FC Steel Inc</div>
             </div>
           </div>
         </motion.div>
