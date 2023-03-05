@@ -98,7 +98,11 @@ export const Testimonials = () => {
           <motion.div variants={fadeIn} className={css.slider}>
             <Slider {...settings}>
               {testimonials.map((testimonial) => (
-                <div key={testimonial.id} className={css.item}>
+                <motion.div
+                  variants={textVariant2}
+                  key={testimonial.id}
+                  className={css.item}
+                >
                   <div className={css.image}>
                     <img
                       src={
@@ -118,7 +122,7 @@ export const Testimonials = () => {
                   <div className={css.text}>
                     <p>{testimonial.text}</p>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </Slider>
           </motion.div>
