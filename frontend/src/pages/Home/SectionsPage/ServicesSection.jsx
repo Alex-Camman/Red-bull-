@@ -10,7 +10,6 @@ import { Element } from "react-scroll";
 export const ServicesSection = () => {
   return (
     <Element name="services">
-      {" "}
       <motion.section
         variants={staggerChildren}
         initial="hidden"

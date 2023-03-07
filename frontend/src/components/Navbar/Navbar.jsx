@@ -25,11 +25,6 @@ export const Navbar = () => {
     navigate(path);
   };
 
-  const handleLinkClick = (sectionId) => {
-    const url = `${window.location.origin}/page#/${sectionId}`;
-    window.open(url, "_blank");
-  };
-
   return (
     <motion.div
       variants={headerVariants}
@@ -70,14 +65,7 @@ export const Navbar = () => {
             </Link>
           </li>
           <li onClick={() => setMenuOpened(!menuOpened)}>
-            <NavLink
-              to="/Gallery"
-              style={({ isActive }) => ({
-                color: isActive ? "#4d4d4d" : undefined,
-              })}
-            >
-              Gallery
-            </NavLink>
+            <NavLink to="/gallery">Gallery</NavLink>
           </li>
         </ul>
 
