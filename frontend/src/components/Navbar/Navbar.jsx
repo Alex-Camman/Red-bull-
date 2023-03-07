@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { LogoFc, LogoG } from "../../assets/svgs";
 import css from "./Navbar.module.scss";
 import { BiMenuAltRight } from "react-icons/bi";
@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { getMenuStyles, headerVariants } from "../../utils/motion";
 import useHeaderShadow from "../../hooks/useHeaderShadow";
 import useOutsideAlerter from "../../hooks/useOutsideAlerter";
+import { Link } from "react-scroll";
 
 export const Navbar = () => {
   const menuRef = useRef(null);
@@ -22,6 +23,11 @@ export const Navbar = () => {
 
   const goToPage = (path) => {
     navigate(path);
+  };
+
+  const handleLinkClick = (sectionId) => {
+    const url = `${window.location.origin}/page#/${sectionId}`;
+    window.open(url, "_blank");
   };
 
   return (
@@ -43,45 +49,25 @@ export const Navbar = () => {
           style={getMenuStyles(menuOpened)}
         >
           <li onClick={() => setMenuOpened(!menuOpened)}>
-            <NavLink
-              to="/"
-              style={({ isActive }) => ({
-                color: isActive ? "#4d4d4d" : undefined,
-              })}
-            >
+            <Link to="Hero" smooth={true} duration={800} offset={-90}>
               Home
-            </NavLink>
+            </Link>
           </li>
           <li onClick={() => setMenuOpened(!menuOpened)}>
-            <NavLink
-              to="/About"
-              style={({ isActive }) => ({
-                color: isActive ? "#4d4d4d" : undefined,
-              })}
-            >
+            <Link to="aboutUs" smooth={true} duration={800} offset={-90}>
               About Us
-            </NavLink>
+            </Link>
           </li>
           <li onClick={() => setMenuOpened(!menuOpened)}>
-            <NavLink
-              to="/Services"
-              style={({ isActive }) => ({
-                color: isActive ? "#4d4d4d" : undefined,
-              })}
-            >
+            <Link to="services" smooth={true} duration={800} offset={-90}>
               Services
-            </NavLink>
+            </Link>
           </li>
 
           <li onClick={() => setMenuOpened(!menuOpened)}>
-            <NavLink
-              to="/Contact"
-              style={({ isActive }) => ({
-                color: isActive ? "#4d4d4d" : undefined,
-              })}
-            >
+            <Link to="contact" smooth={true} duration={800} offset={-90}>
               Contact Us
-            </NavLink>
+            </Link>
           </li>
           <li onClick={() => setMenuOpened(!menuOpened)}>
             <NavLink

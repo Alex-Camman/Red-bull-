@@ -9,6 +9,7 @@ import { EffectCards } from "swiper";
 import { Olas, WaterWave } from "@components/Home";
 import { staggerContainer, slideIn, fadeIn } from "@utils/motion";
 import { motion } from "framer-motion";
+import { Element } from "react-scroll";
 
 const images = [
   "/assets/hero/h1.jpg",
@@ -19,7 +20,7 @@ const images = [
 
 export const Hero = () => {
   return (
-    <>
+    <Element name="Hero">
       <section className={`paddings ${css.wrapper}`}>
         <motion.div
           variants={staggerContainer}
@@ -64,6 +65,6 @@ export const Hero = () => {
         {/* <Olas /> */}
         <WaterWave />
       </section>
-    </>
+    </Element>
   );
 };
