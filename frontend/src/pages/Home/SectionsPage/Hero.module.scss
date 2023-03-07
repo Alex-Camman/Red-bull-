@@ -1,8 +1,11 @@
 @import "@scss/abstracts/variables";
 
 .wrapper {
+  position: relative;
+  width: 100%;
   height: 100vh;
-  background-image: url("@assets/images/hero2.png");
+  // background: #1f2028;
+  // background-image: url("@assets/images/hero2.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;

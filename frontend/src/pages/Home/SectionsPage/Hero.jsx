@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/effect-cards";
 // import required modules
 import { EffectCards } from "swiper";
-import { Olas } from "@components/Home";
+import { Olas, WaterWave } from "@components/Home";
 import { staggerContainer, slideIn, fadeIn } from "@utils/motion";
 import { motion } from "framer-motion";
 
@@ -61,7 +61,8 @@ export const Hero = () => {
             </Swiper>
           </motion.div>
         </motion.div>
-        <Olas />
+        {/* <Olas /> */}
+        <WaterWave />
       </section>
     </>
   );
