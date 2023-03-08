@@ -1,13 +1,6 @@
 import { useState } from "react";
-
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {
-//   faCircleChevronLeft,
-//   faCircleChevronRight,
-//   faCircleXmark,
-// } from "@fortawesome/free-solid-svg-icons";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import { GrClose } from "react-icons/gr";
+import { FaExpandAlt } from "react-icons/fa";
 
 import "./wsp-gallery.css";
 
@@ -43,7 +36,7 @@ const WSPGallery = ({ galleryImages }) => {
     <div>
       {openModal && (
         <div className="sliderWrap">
-          <GrClose className="btnClose" onClick={handleCloseModal} />
+          <FaExpandAlt className="btnClose" onClick={handleCloseModal} />
           <FaArrowLeft className="btnPrev" onClick={prevSlide} />
           <FaArrowRight className="btnNext" onClick={nextSlide} />
           <div className="fullScreenImage">
@@ -51,13 +44,6 @@ const WSPGallery = ({ galleryImages }) => {
           </div>
         </div>
       )}
-
-      {/* <br />
-      Current slide number:  {slideNumber}
-      <br />
-      Total Slides: {galleryImages.length}
-      <br /><br /> */}
-
       <div className="galleryWrap">
         {galleryImages &&
           galleryImages.map((slide, index) => {

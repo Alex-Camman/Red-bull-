@@ -1,5 +1,7 @@
 import css from "./StarGallery.module.scss";
 import WSPGallery from "@components/Gallery/WSPGallery";
+import { staggerContainer, slideIn, fadeIn, textVariant2 } from "@utils/motion";
+import { motion } from "framer-motion";
 
 export const StarGallery = () => {
   const galleryImages = [
@@ -24,19 +26,22 @@ export const StarGallery = () => {
   ];
 
   return (
-    <div>
-      <br />
-      <div>
-        <strong>
-          Responsive Photo Gallery (No External Library) in React JS
-        </strong>
-      </div>
-      <br />
-      <br />
-      <WSPGallery galleryImages={galleryImages} />
-      <br />
-      <br />
-      <div>- WebStylePress -</div>
-    </div>
+    <section className={`paddings ${css.wrapper}`} id="Hero">
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+        className={`innerWidth ${css.container}`}
+      >
+        <motion.div variants={textVariant2} className={css.titleSection}>
+          <h2>Gallery</h2>
+          <hr />
+        </motion.div>
+        <div className={css.galleryContainer}>
+          <WSPGallery galleryImages={galleryImages} />
+        </div>
+      </motion.div>
+    </section>
   );
 };
