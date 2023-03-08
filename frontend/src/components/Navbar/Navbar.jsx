@@ -27,19 +27,27 @@ export const Navbar = () => {
   };
 
   const scrollToSection = (sectionId) => {
-    if (location.pathname === "/gallery") {
-      goToPage("/");
-      setTimeout(() => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth", offset: 100 });
-        }
-      }, 500);
-    } else {
-      setMenuOpened(false);
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth", offset: 100 });
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offset = 90;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      if (location.pathname === "/") {
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      } else {
+        goToPage("/");
+        setTimeout(() => {
+          const element = document.getElementById(sectionId);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth", offset: 100 });
+          }
+        }, 500);
       }
     }
   };
