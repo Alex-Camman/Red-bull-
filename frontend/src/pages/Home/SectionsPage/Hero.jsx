@@ -18,6 +18,22 @@ const images = [
   "/assets/hero/h4.jpg",
 ];
 
+const scrollToSection = (sectionId) => {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    const offset = 90;
+    const bodyRect = document.body.getBoundingClientRect().top;
+    const elementRect = element.getBoundingClientRect().top;
+    const elementPosition = elementRect - bodyRect;
+    const offsetPosition = elementPosition - offset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+  }
+};
+
 export const Hero = () => {
   return (
     <section className={`paddings ${css.wrapper}`} id="Hero">
@@ -40,7 +56,12 @@ export const Hero = () => {
             for swimming pools.
           </h3>
           <div className={css.containerBtn}>
-            <button className={css.btn}>Get a quote</button>
+            <button
+              className={css.btn}
+              onClick={() => scrollToSection("contact")}
+            >
+              Get a quote
+            </button>
           </div>
         </motion.div>
         <motion.div

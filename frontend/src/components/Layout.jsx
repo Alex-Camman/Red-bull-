@@ -8,7 +8,7 @@ export const Layout = () => {
     <>
       <Navbar />
       <Outlet />
-      <WhatsApp />
+      {/* <WhatsApp /> */}
       <Footer />
     </>
   );
