@@ -9,7 +9,6 @@ import { EffectCards } from "swiper";
 import { Olas, WaterWave } from "@components/Home";
 import { staggerContainer, slideIn, fadeIn } from "@utils/motion";
 import { motion } from "framer-motion";
-import { Element } from "react-scroll";
 
 const images = [
   "/assets/hero/h1.jpg",

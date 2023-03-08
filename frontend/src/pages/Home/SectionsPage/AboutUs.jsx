@@ -5,7 +5,6 @@ import about from "@assets/images/about.jpg";
 import CountUp from "react-countup";
 import ScrollTrigger from "react-scroll-trigger";
 import { useState } from "react";
-import { Element } from "react-scroll";
 
 export const AboutUs = () => {
   const [counterOn, setCounterOn] = useState(false);

@@ -5,7 +5,6 @@ import service1 from "@assets/images/service1.jpg";
 import service2 from "@assets/images/service2.jpg";
 import { AiFillTool } from "react-icons/ai";
 import { AiOutlineGateway } from "react-icons/ai";
-import { Element } from "react-scroll";
 
 export const ServicesSection = () => {
   return (
