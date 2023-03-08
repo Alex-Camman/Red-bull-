@@ -48,8 +48,8 @@
       @media (max-width: $sm), (max-width: $md) {
         font-size: 1rem;
         border-radius: 50px;
-        background: linear-gradient(145deg, #f0f0f0, #cacaca);
-        box-shadow: 10px 10px 21px #c1c1c1, -10px -10px 21px #ffffff;
+        background: linear-gradient(145deg, #dddddd, #ffffff);
+        box-shadow: 7px 7px 14px #dadada, -7px -7px 14px #ffffff;
         position: absolute;
         list-style: none;
         gap: 2rem;
@@ -72,9 +72,10 @@
 
       li {
         transition: 350ms;
+        color: var(--color-secondary);
 
         a {
-          color: var(--color-text);
+          color: var(--color-secondary);
           text-decoration: none;
         }
       }
