@@ -23,6 +23,117 @@ export const StarGallery = () => {
     {
       img: "https://images.pexels.com/photos/1712/sunglasses-apple-iphone-desk.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
+    {
+      img: "/assets/gallery/image1.jpg",
+    },
+    {
+      img: "/assets/gallery/image2.jpg",
+    },
+    {
+      img: "/assets/gallery/image3.jpg",
+    },
+    {
+      img: "/assets/gallery/image4.jpg",
+    },
+    {
+      img: "/assets/gallery/image5.jpg",
+    },
+    {
+      img: "/assets/gallery/image6.jpg",
+    },
+    {
+      img: "/assets/gallery/image7.jpg",
+    },
+    {
+      img: "/assets/gallery/image8.jpg",
+    },
+    {
+      img: "/assets/gallery/image9.jpg",
+    },
+    {
+      img: "/assets/gallery/image10.jpg",
+    },
+    {
+      img: "/assets/gallery/image11.jpg",
+    },
+    {
+      img: "/assets/gallery/image12.jpg",
+    },
+    {
+      img: "/assets/gallery/image13.jpg",
+    },
+    {
+      img: "/assets/gallery/image14.jpg",
+    },
+    {
+      img: "/assets/gallery/image15.jpg",
+    },
+    {
+      img: "/assets/gallery/image16.jpg",
+    },
+    {
+      img: "/assets/gallery/image17.jpg",
+    },
+    {
+      img: "/assets/gallery/image18.jpg",
+    },
+    {
+      img: "/assets/gallery/image19.jpg",
+    },
+    {
+      img: "/assets/gallery/image20.jpg",
+    },
+    {
+      img: "/assets/gallery/image21.jpg",
+    },
+    {
+      img: "/assets/gallery/image22.jpg",
+    },
+    {
+      img: "/assets/gallery/image23.jpg",
+    },
+    {
+      img: "/assets/gallery/image24.jpg",
+    },
+    {
+      img: "/assets/gallery/image25.jpg",
+    },
+    {
+      img: "/assets/gallery/image26.jpg",
+    },
+    {
+      img: "/assets/gallery/image27.jpg",
+    },
+    {
+      img: "/assets/gallery/image28.jpg",
+    },
+    {
+      img: "/assets/gallery/image29.jpg",
+    },
+    {
+      img: "/assets/gallery/image30.jpg",
+    },
+    {
+      img: "/assets/gallery/image31.jpg",
+    },
+    {
+      img: "/assets/gallery/image32.jpg",
+    },
+    {
+      img: "/assets/gallery/image33.jpg",
+    },
+    {
+      img: "/assets/gallery/image34.jpg",
+    },
+    {
+      img: "/assets/gallery/image35.jpg",
+    },
+    {
+      img: "/assets/gallery/image36.jpg",
+    },
+    {
+      img: "/assets/gallery/image37.jpg",
+    },
   ];
 
   return (
