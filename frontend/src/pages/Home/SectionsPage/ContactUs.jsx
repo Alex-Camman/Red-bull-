@@ -152,7 +152,7 @@ export const ContactUs = () => {
                     })}
                   ></textarea>
                   {errors.message?.type === "required" && (
-                    <span>Este campo es requerido!</span>
+                    <span>This field is required!</span>
                   )}
                 </div>
                 <div className={css.btn}>
