@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import { LogoFc, LogoG } from "../../assets/svgs";
 import css from "./Navbar.module.scss";
 import { BiMenuAltRight } from "react-icons/bi";
@@ -14,6 +14,7 @@ export const Navbar = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const headerShadow = useHeaderShadow();
   const navigate = useNavigate();
+  const location = useLocation();
 
   //to handle click outside of sidebar on mobile
   useOutsideAlerter({
@@ -23,6 +24,24 @@ export const Navbar = () => {
 
   const goToPage = (path) => {
     navigate(path);
+  };
+
+  const scrollToSection = (sectionId) => {
+    if (location.pathname === "/gallery") {
+      goToPage("/");
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", offset: 100 });
+        }
+      }, 500);
+    } else {
+      setMenuOpened(false);
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", offset: 100 });
+      }
+    }
   };
 
   return (
@@ -43,28 +62,20 @@ export const Navbar = () => {
           ref={menuRef}
           style={getMenuStyles(menuOpened)}
         >
-          <li onClick={() => setMenuOpened(!menuOpened)}>
-            <Link to="Hero" smooth={true} duration={800} offset={-90}>
-              Home
-            </Link>
+          <li onClick={() => scrollToSection("Hero")}>
+            <span>Home</span>
           </li>
-          <li onClick={() => setMenuOpened(!menuOpened)}>
-            <Link to="aboutUs" smooth={true} duration={800} offset={-90}>
-              About Us
-            </Link>
+          <li onClick={() => scrollToSection("aboutUs")}>
+            <span>About Us</span>
           </li>
-          <li onClick={() => setMenuOpened(!menuOpened)}>
-            <Link to="services" smooth={true} duration={800} offset={-90}>
-              Services
-            </Link>
+          <li onClick={() => scrollToSection("services")}>
+            <span>Services</span>
           </li>
 
-          <li onClick={() => setMenuOpened(!menuOpened)}>
-            <Link to="contact" smooth={true} duration={800} offset={-90}>
-              Contact Us
-            </Link>
+          <li onClick={() => scrollToSection("contact")}>
+            <span>Contact Us</span>
           </li>
-          <li onClick={() => setMenuOpened(!menuOpened)}>
+          <li onClick={() => goToPage("/gallery")}>
             <NavLink to="/gallery">Gallery</NavLink>
           </li>
         </ul>
