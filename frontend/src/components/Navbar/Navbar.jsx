@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 import { getMenuStyles, headerVariants } from "../../utils/motion";
 import useHeaderShadow from "../../hooks/useHeaderShadow";
 import useOutsideAlerter from "../../hooks/useOutsideAlerter";
-import { Link } from "react-scroll";
 
 export const Navbar = () => {
   const menuRef = useRef(null);

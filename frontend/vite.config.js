@@ -16,4 +16,7 @@ export default defineConfig({
       '@scss': path.resolve(__dirname, 'src/scss'),
     },
   },
+  build: {
+    chunkSizeWarningLimit: 1600,
+  },
 })
