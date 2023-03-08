@@ -50,7 +50,11 @@ export const Footer = () => {
           <div className={`${css.contact}`}>
             <h4>ContactUs</h4>
             <ul>
-              <li>
+              <li
+                onClick={() =>
+                  openLink("mailto:franciscocazaressteel@hotmail.com")
+                }
+              >
                 <span>
                   <HiOutlineMail />
                 </span>
