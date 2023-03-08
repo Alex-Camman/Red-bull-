@@ -27,29 +27,45 @@ export const Navbar = () => {
   };
 
   const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const offset = 90;
-      const bodyRect = document.body.getBoundingClientRect().top;
-      const elementRect = element.getBoundingClientRect().top;
-      const elementPosition = elementRect - bodyRect;
-      const offsetPosition = elementPosition - offset;
+    if (location.pathname === "/") {
+      setMenuOpened(false);
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const offset = 90;
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = element.getBoundingClientRect().top;
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
 
-      if (location.pathname === "/") {
         window.scrollTo({
           top: offsetPosition,
           behavior: "smooth",
         });
-      } else {
-        goToPage("/");
-        setTimeout(() => {
-          const element = document.getElementById(sectionId);
-          if (element) {
-            element.scrollIntoView({ behavior: "smooth", offset: 100 });
-          }
-        }, 500);
       }
+    } else {
+      setMenuOpened(false);
+      navigate("/");
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const offset = 90;
+          const bodyRect = document.body.getBoundingClientRect().top;
+          const elementRect = element.getBoundingClientRect().top;
+          const elementPosition = elementRect - bodyRect;
+          const offsetPosition = elementPosition - offset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth",
+          });
+        }
+      }, 500);
     }
+  };
+
+  const handleOtherPageClick = (path) => {
+    setMenuOpened(false);
+    navigate(path);
   };
 
   return (
@@ -83,7 +99,7 @@ export const Navbar = () => {
           <li onClick={() => scrollToSection("contact")}>
             <span>Contact Us</span>
           </li>
-          <li onClick={() => goToPage("/gallery")}>
+          <li onClick={() => handleOtherPageClick("/gallery")}>
             <NavLink to="/gallery">Gallery</NavLink>
           </li>
         </ul>
