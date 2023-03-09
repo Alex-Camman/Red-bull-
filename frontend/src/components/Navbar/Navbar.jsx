@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
-import { LogoFc, LogoG } from "../../assets/svgs";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
+import { LogoFc, LogoG, LogoBlue } from "../../assets/svgs";
 import css from "./Navbar.module.scss";
 import { BiMenuAltRight } from "react-icons/bi";
 import { motion } from "framer-motion";
@@ -13,6 +13,7 @@ export const Navbar = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const headerShadow = useHeaderShadow();
   const navigate = useNavigate();
+  const location = useLocation();
 
   //to handle click outside of sidebar on mobile
   useOutsideAlerter({
@@ -20,7 +21,45 @@ export const Navbar = () => {
     setMenuOpened,
   });
 
-  const goToPage = (path) => {
+  const scrollToSection = (sectionId) => {
+    if (location.pathname === "/") {
+      setMenuOpened(false);
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const offset = 75;
+        const bodyRect = document.body.getBoundingClientRect().top;
+        const elementRect = element.getBoundingClientRect().top;
+        const elementPosition = elementRect - bodyRect;
+        const offsetPosition = elementPosition - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+    } else {
+      setMenuOpened(false);
+      navigate("/");
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const offset = 75;
+          const bodyRect = document.body.getBoundingClientRect().top;
+          const elementRect = element.getBoundingClientRect().top;
+          const elementPosition = elementRect - bodyRect;
+          const offsetPosition = elementPosition - offset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth",
+          });
+        }
+      }, 500);
+    }
+  };
+
+  const handleOtherPageClick = (path) => {
+    setMenuOpened(false);
     navigate(path);
   };
 
@@ -34,63 +73,29 @@ export const Navbar = () => {
       // style={{ boxShadow: headerShadow }}
     >
       <div className={`innerWidth ${css.container} flexCenter`}>
-        <div className={css.logo} onClick={() => goToPage("/")}>
-          <LogoG />
+        <div className={css.logo} onClick={() => scrollToSection("Hero")}>
+          <LogoBlue />
         </div>
         <ul
           className={`flexCenter ${css.menu}`}
           ref={menuRef}
           style={getMenuStyles(menuOpened)}
         >
-          <li onClick={() => setMenuOpened(!menuOpened)}>
-            <NavLink
-              to="/"
-              style={({ isActive }) => ({
-                color: isActive ? "#4d4d4d" : undefined,
-              })}
-            >
-              Home
-            </NavLink>
+          <li onClick={() => scrollToSection("Hero")}>
+            <span>Home</span>
           </li>
-          <li onClick={() => setMenuOpened(!menuOpened)}>
-            <NavLink
-              to="/About"
-              style={({ isActive }) => ({
-                color: isActive ? "#4d4d4d" : undefined,
-              })}
-            >
-              About Us
-            </NavLink>
+          <li onClick={() => scrollToSection("aboutUs")}>
+            <span>About Us</span>
           </li>
-          <li onClick={() => setMenuOpened(!menuOpened)}>
-            <NavLink
-              to="/Services"
-              style={({ isActive }) => ({
-                color: isActive ? "#4d4d4d" : undefined,
-              })}
-            >
-              Services
-            </NavLink>
+          <li onClick={() => scrollToSection("services")}>
+            <span>Services</span>
           </li>
-          <li onClick={() => setMenuOpened(!menuOpened)}>
-            <NavLink
-              to="/Gallery"
-              style={({ isActive }) => ({
-                color: isActive ? "#4d4d4d" : undefined,
-              })}
-            >
-              Gallery
-            </NavLink>
+
+          <li onClick={() => scrollToSection("contact")}>
+            <span>Contact Us</span>
           </li>
-          <li onClick={() => setMenuOpened(!menuOpened)}>
-            <NavLink
-              to="/Contact"
-              style={({ isActive }) => ({
-                color: isActive ? "#4d4d4d" : undefined,
-              })}
-            >
-              Contact Us
-            </NavLink>
+          <li onClick={() => handleOtherPageClick("/gallery")}>
+            <NavLink to="/gallery">Gallery</NavLink>
           </li>
         </ul>
 

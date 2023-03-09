@@ -1,5 +1,9 @@
-import React from "react";
+import { StarGallery } from "./SectionsPage";
 
 export const Gallery = () => {
-  return <div>Gallery</div>;
+  return (
+    <>
+      <StarGallery />
+    </>
+  );
 };

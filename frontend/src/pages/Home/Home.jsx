@@ -1,17 +1,21 @@
-import { Section1 } from "./SectionsPage/Section1";
+import {
+  Hero,
+  ContactUs,
+  AboutUs,
+  ServicesSection,
+  WithUs,
+  Testimonials,
+} from "./SectionsPage";
 
 export const Home = () => {
   return (
     <>
-      <div
-        style={{
-          height: "100vh",
-          backgroundColor: "white",
-        }}
-      >
-        ahsjha
-      </div>
-      <Section1 />
+      <Hero />
+      <AboutUs />
+      <ServicesSection />
+      <WithUs />
+      <Testimonials />
+      <ContactUs />
     </>
   );
 };
