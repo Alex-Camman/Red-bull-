@@ -77,7 +77,7 @@ export const Navbar = () => {
       // style={{ boxShadow: headerShadow }}
     >
       <div className={`innerWidth ${css.container} flexCenter`}>
-        <div className={css.logo} onClick={() => goToPage("/")}>
+        <div className={css.logo} onClick={() => scrollToSection("Hero")}>
           <LogoG />
         </div>
         <ul
