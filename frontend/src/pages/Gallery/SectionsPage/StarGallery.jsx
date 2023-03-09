@@ -145,10 +145,10 @@ export const StarGallery = () => {
         viewport={{ once: false, amount: 0.25 }}
         className={`innerWidth ${css.container}`}
       >
-        <motion.div variants={textVariant2} className={css.titleSection}>
+        <div className={css.titleSection}>
           <h2>Gallery</h2>
           <hr />
-        </motion.div>
+        </div>
         <div className={css.galleryContainer}>
           <WSPGallery galleryImages={galleryImages} />
         </div>
