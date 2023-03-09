@@ -1,10 +1,10 @@
+import { useState } from "react";
 import css from "./AboutUs.module.scss";
 import { motion } from "framer-motion";
 import { staggerChildren, textVariant2 } from "@utils/motion";
 import about from "@assets/images/about.jpg";
 import CountUp from "react-countup";
 import ScrollTrigger from "react-scroll-trigger";
-import { useState } from "react";
 
 export const AboutUs = () => {
   const [counterOn, setCounterOn] = useState(false);
@@ -16,7 +16,6 @@ export const AboutUs = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      section
       className={`paddings ${css.wrapper}`}
     >
       <div className={`yPaddings innerWidth ${css.container}`}>

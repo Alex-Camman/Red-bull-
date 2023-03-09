@@ -1,6 +1,12 @@
 import css from "./StarGallery.module.scss";
 import WSPGallery from "@components/Gallery/WSPGallery";
-import { staggerContainer, slideIn, fadeIn, textVariant2 } from "@utils/motion";
+import {
+  staggerChildren,
+  staggerContainer,
+  slideIn,
+  fadeIn,
+  textVariant2,
+} from "@utils/motion";
 import { motion } from "framer-motion";
 
 export const StarGallery = () => {
@@ -119,7 +125,14 @@ export const StarGallery = () => {
   ];
 
   return (
-    <section className={`paddings ${css.wrapper}`} id="Hero">
+    <motion.section
+      variants={staggerChildren}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.25 }}
+      className={`paddings ${css.wrapper}`}
+      id="Hero"
+    >
       <motion.div
         variants={staggerContainer}
         initial="hidden"
@@ -135,6 +148,6 @@ export const StarGallery = () => {
           <WSPGallery galleryImages={galleryImages} />
         </div>
       </motion.div>
-    </section>
+    </motion.section>
   );
 };
