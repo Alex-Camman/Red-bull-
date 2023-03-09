@@ -21,9 +21,13 @@ export const Pagination = ({ pagina, setPagina, maximo }) => {
       <div className={styles.arrow} onClick={handlePrev}>
         <IoIosArrowBack />
       </div>
-      <div className={styles.pag}>{pagina - 1}</div>
+      <div className={styles.pag} onClick={() => handlePrev()}>
+        {pagina - 1}
+      </div>
       <div className={styles.pagActive}>{pagina}</div>
-      <div className={styles.pag}>{pagina + 1}</div>
+      <div className={styles.pag} onClick={() => handleNext()}>
+        {pagina + 1}
+      </div>
       <div className={styles.arrow} onClick={handleNext}>
         <IoIosArrowForward />
       </div>
