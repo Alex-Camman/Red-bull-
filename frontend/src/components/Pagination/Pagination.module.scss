@@ -12,16 +12,19 @@
     align-items: center;
     cursor: pointer;
     transition: all 0.3s ease;
+    border-radius: 5px;
     &:hover {
       transition: all 0.3s ease;
-      box-shadow: 0px 4px 8px 0px #00000026;
+      background: #e0e0e0;
+      box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+      color: #000;
     }
     svg {
       width: 17px;
       height: 17px;
-      color: var(--color-primary);
+      color: var(--color-text);
       &:hover {
-        color: var(--color-primary);
+        color: black;
       }
     }
   }
@@ -35,24 +38,24 @@
     align-items: center;
     font-size: 20px;
     font-weight: 700;
-    color: var(--color-primary);
+    color: var(--color-text);
     margin: 0px 5px;
   }
   .pagActive {
-    background-color: var(--color-primary);
+    background: #e0e0e0;
+    border-radius: 7px;
     border: none;
     width: 36px;
     height: 36px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: var(--font-inter);
+    font-weight: 700;
     font-size: 20px;
-    color: white;
+    color: var(--color-secondary);
     margin: 0px 10px;
   }
   p {
-    font-family: var(--font-inter);
     font-size: 20px;
     color: var(--color-text);
     margin: 0px 10px;

@@ -1,8 +1,8 @@
 .galleryWrap {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 20px;
-  max-width: 1000px;
+  /* max-width: 1000px; */
   margin: 0 auto;
 }
 
@@ -11,13 +11,13 @@
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 200px; /* o cualquier altura deseada */
+  height: 230px; /* o cualquier altura deseada */
 }
 
 .galleryWrap .single img {
   width: 100%;
   height: 100%;
-  max-height: 200px; /* o cualquier altura máxima deseada */
+  max-height: 230px; /* o cualquier altura máxima deseada */
   transition: 350ms;
   object-fit: cover;
   object-position: center;
@@ -90,4 +90,11 @@
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */  
+}
+.containerPagination{
+ display: grid;
+ place-items: center;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
 }
