@@ -1,0 +1,60 @@
+.container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  .arrow {
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+      transition: all 0.3s ease;
+      box-shadow: 0px 4px 8px 0px #00000026;
+    }
+    svg {
+      width: 17px;
+      height: 17px;
+      color: var(--color-primary);
+      &:hover {
+        color: var(--color-primary);
+      }
+    }
+  }
+  .pag {
+    background-color: white;
+    border-radius: 2px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 0px 5px;
+  }
+  .pagActive {
+    background-color: var(--color-primary);
+    border: none;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-inter);
+    font-size: 20px;
+    color: white;
+    margin: 0px 10px;
+  }
+  p {
+    font-family: var(--font-inter);
+    font-size: 20px;
+    color: var(--color-text);
+    margin: 0px 10px;
+  }
+}

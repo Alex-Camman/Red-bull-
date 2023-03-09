@@ -6,29 +6,11 @@ import { motion } from "framer-motion";
 export const StarGallery = () => {
   const galleryImages = [
     {
-      img: "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-      img: "https://images.pexels.com/photos/3861458/pexels-photo-3861458.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-      img: "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-      img: "https://images.pexels.com/photos/1194713/pexels-photo-1194713.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-      img: "https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
-      img: "https://images.pexels.com/photos/1712/sunglasses-apple-iphone-desk.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    },
-    {
       img: "/assets/gallery/image1.jpg",
     },
-    {
-      img: "/assets/gallery/image2.jpg",
-    },
+    // {
+    //   img: "/assets/gallery/image2.jpg",
+    // },
     {
       img: "/assets/gallery/image3.jpg",
     },
@@ -50,27 +32,27 @@ export const StarGallery = () => {
     {
       img: "/assets/gallery/image9.jpg",
     },
-    {
-      img: "/assets/gallery/image10.jpg",
-    },
-    {
-      img: "/assets/gallery/image11.jpg",
-    },
-    {
-      img: "/assets/gallery/image12.jpg",
-    },
+    // {
+    //   img: "/assets/gallery/image10.jpg",
+    // },
+    // {
+    //   img: "/assets/gallery/image11.jpg",
+    // },
+    // {
+    //   img: "/assets/gallery/image12.jpg",
+    // },
     {
       img: "/assets/gallery/image13.jpg",
     },
-    {
-      img: "/assets/gallery/image14.jpg",
-    },
+    // {
+    //   img: "/assets/gallery/image14.jpg",
+    // },
     {
       img: "/assets/gallery/image15.jpg",
     },
-    {
-      img: "/assets/gallery/image16.jpg",
-    },
+    // {
+    //   img: "/assets/gallery/image16.jpg",
+    // },
     {
       img: "/assets/gallery/image17.jpg",
     },
@@ -89,9 +71,9 @@ export const StarGallery = () => {
     {
       img: "/assets/gallery/image22.jpg",
     },
-    {
-      img: "/assets/gallery/image23.jpg",
-    },
+    // {
+    //   img: "/assets/gallery/image23.jpg",
+    // },
     {
       img: "/assets/gallery/image24.jpg",
     },
@@ -101,9 +83,9 @@ export const StarGallery = () => {
     {
       img: "/assets/gallery/image26.jpg",
     },
-    {
-      img: "/assets/gallery/image27.jpg",
-    },
+    // {
+    //   img: "/assets/gallery/image27.jpg",
+    // },
     {
       img: "/assets/gallery/image28.jpg",
     },
