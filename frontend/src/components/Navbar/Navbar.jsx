@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
-import { LogoFc, LogoG } from "../../assets/svgs";
+import { LogoFc, LogoG, LogoBlue } from "../../assets/svgs";
 import css from "./Navbar.module.scss";
 import { BiMenuAltRight } from "react-icons/bi";
 import { motion } from "framer-motion";
@@ -20,10 +20,6 @@ export const Navbar = () => {
     menuRef,
     setMenuOpened,
   });
-
-  const goToPage = (path) => {
-    navigate(path);
-  };
 
   const scrollToSection = (sectionId) => {
     if (location.pathname === "/") {
@@ -78,7 +74,7 @@ export const Navbar = () => {
     >
       <div className={`innerWidth ${css.container} flexCenter`}>
         <div className={css.logo} onClick={() => scrollToSection("Hero")}>
-          <LogoG />
+          <LogoBlue />
         </div>
         <ul
           className={`flexCenter ${css.menu}`}
