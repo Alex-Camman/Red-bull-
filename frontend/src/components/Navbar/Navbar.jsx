@@ -30,7 +30,7 @@ export const Navbar = () => {
       setMenuOpened(false);
       const element = document.getElementById(sectionId);
       if (element) {
-        const offset = 90;
+        const offset = 75;
         const bodyRect = document.body.getBoundingClientRect().top;
         const elementRect = element.getBoundingClientRect().top;
         const elementPosition = elementRect - bodyRect;
@@ -47,7 +47,7 @@ export const Navbar = () => {
       setTimeout(() => {
         const element = document.getElementById(sectionId);
         if (element) {
-          const offset = 90;
+          const offset = 75;
           const bodyRect = document.body.getBoundingClientRect().top;
           const elementRect = element.getBoundingClientRect().top;
           const elementPosition = elementRect - bodyRect;
