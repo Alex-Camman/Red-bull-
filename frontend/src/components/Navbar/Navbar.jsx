@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { getMenuStyles, headerVariants } from "../../utils/motion";
 import useHeaderShadow from "../../hooks/useHeaderShadow";
 import useOutsideAlerter from "../../hooks/useOutsideAlerter";
+import logo from "@assets/images/logo.png";
 
 export const Navbar = () => {
   const menuRef = useRef(null);
@@ -74,7 +75,8 @@ export const Navbar = () => {
     >
       <div className={`innerWidth ${css.container} flexCenter`}>
         <div className={css.logo} onClick={() => scrollToSection("Hero")}>
-          <LogoBlue />
+          {/* <LogoBlue /> */}
+          <img src={logo} alt="logo" />
         </div>
         <ul
           className={`flexCenter ${css.menu}`}
