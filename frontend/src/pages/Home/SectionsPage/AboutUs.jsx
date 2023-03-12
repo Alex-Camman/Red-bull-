@@ -61,7 +61,7 @@ export const AboutUs = () => {
             <motion.div variants={textVariant2} className={css.stat}>
               <h3>
                 {counterOn && (
-                  <CountUp start={0} end={12} duration={2} delay={0} />
+                  <CountUp start={0} end={20} duration={2} delay={0} />
                 )}
                 +
               </h3>

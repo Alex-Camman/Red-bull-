@@ -16,7 +16,7 @@
     .top {
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
+      align-items: stretch;
       gap: 1.5rem;
       @media (max-width: $lg) {
         flex-direction: column;
@@ -30,7 +30,7 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        width: 50%;
+        width: 45%;
         @media (max-width: $xl) {
           width: 40%;
         }
@@ -48,9 +48,12 @@
           svg {
             width: 300px;
           }
+          img {
+            width: 250px;
+          }
         }
         .text {
-          width: 90%;
+          width: 100%;
           font-size: 16px;
           font-weight: 500;
           color: var(--color-secondary);
@@ -86,8 +89,17 @@
           }
           li {
             font-size: 14px;
+            display: flex;
+            align-items: center;
             margin-bottom: 1rem;
             color: var(--color-text);
+            span {
+              font-size: 14px;
+              margin-right: 0.5rem;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
           }
         }
       }
@@ -104,11 +116,12 @@
           }
           li {
             display: flex;
+            font-size: 14px;
             align-items: center;
             margin-bottom: 1rem;
             color: var(--color-text);
             span {
-              font-size: 24px;
+              font-size: 14px;
               margin-right: 0.5rem;
               display: flex;
               align-items: center;
