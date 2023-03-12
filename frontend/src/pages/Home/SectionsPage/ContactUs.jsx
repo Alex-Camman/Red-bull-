@@ -23,6 +23,10 @@ export const ContactUs = () => {
     }, 1000);
   };
 
+  const openLink = (link) => {
+    window.open(link, "_blank");
+  };
+
   return (
     <>
       <motion.section
@@ -63,9 +67,23 @@ export const ContactUs = () => {
                 <HiPhone />
                 (909) 630-3576, (909) 506-7025
               </div>
-              <div className={css.item}>
+              <div
+                className={css.item}
+                onClick={() =>
+                  openLink("mailto:franciscocazaressteel@hotmail.com")
+                }
+              >
                 <HiMail />
                 franciscocazaressteel@hotmail.com
+              </div>
+              <div
+                className={css.item}
+                onClick={() =>
+                  openLink("mailto:franciscocazaressteel@hotmail.com")
+                }
+              >
+                <HiMail />
+                Arisdelzy@fcsteel.info
               </div>
             </div>
           </div>

@@ -34,6 +34,9 @@
         flex-direction: column;
         justify-content: center;
         gap: 2rem;
+        @media (max-width: $lg) {
+          padding: 0 2% 0 0;
+        }
         @media (max-width: $md) {
           width: 100%;
           padding: 0;
@@ -53,6 +56,9 @@
         padding: 0 0 0 5%;
         display: grid;
         place-items: center;
+        @media (max-width: $lg) {
+          padding: 0 0 0 2%;
+        }
         @media (max-width: $md) {
           width: 100%;
           margin-top: 2rem;

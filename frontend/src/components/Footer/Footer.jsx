@@ -2,7 +2,13 @@ import css from "./Footer.module.scss";
 import { LogoW, LogoFc, LogoG } from "../../assets/svgs";
 import { motion } from "framer-motion";
 import { footerVariants, staggerChildren } from "../../utils/motion";
-import { HiOutlineMail, HiPhone, HiLocationMarker } from "react-icons/hi";
+import {
+  HiOutlineMail,
+  HiPhone,
+  HiLocationMarker,
+  HiHome,
+  HiOutlineOfficeBuilding,
+} from "react-icons/hi";
 import {
   BsInstagram,
   BsFacebook,
@@ -11,6 +17,7 @@ import {
   BsYoutube,
 } from "react-icons/bs";
 import { FaTiktok } from "react-icons/fa";
+import logo from "@assets/images/logo.png";
 
 export const Footer = () => {
   const openLink = (link) => {
@@ -32,7 +39,8 @@ export const Footer = () => {
         <div className={`${css.top}`}>
           <div className={`${css.brand}`}>
             <div className={css.logo}>
-              <LogoG />
+              {/* <LogoG /> */}
+              <img src={logo} alt="logo" />
             </div>
             <div className={`${css.text}`}>
               We specialize in building steel frames and excavating for swimming
@@ -45,6 +53,18 @@ export const Footer = () => {
             <ul>
               <li>Pool Excavations</li>
               <li>Steel Framing for Pools</li>
+              <li>
+                <span>
+                  <HiOutlineOfficeBuilding />
+                </span>
+                Commercial Services
+              </li>
+              <li>
+                <span>
+                  <HiHome />
+                </span>
+                Residential Services
+              </li>
             </ul>
           </div>
           <div className={`${css.contact}`}>
@@ -59,6 +79,16 @@ export const Footer = () => {
                   <HiOutlineMail />
                 </span>
                 franciscocazaressteel@hotmail.com
+              </li>
+              <li
+                onClick={() =>
+                  openLink("mailto:franciscocazaressteel@hotmail.com")
+                }
+              >
+                <span>
+                  <HiOutlineMail />
+                </span>
+                Arisdelzy@fcsteel.info
               </li>
               <li>
                 <span>
